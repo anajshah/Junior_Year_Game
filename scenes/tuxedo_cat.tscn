@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c7yeb3dgslx15"]
+
+[node name="Tuxedo_cat" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
