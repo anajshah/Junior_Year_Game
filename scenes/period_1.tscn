@@ -1,18 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=8 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
+[ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
+[ext_resource type="Texture2D" uid="uid://coyemx4pp0gdp" path="res://assets/sprites/pencils/Untitled_Artwork 22.png" id="3_0el8h"]
+[ext_resource type="Texture2D" uid="uid://3w8lfjyqg5o7" path="res://assets/sprites/pencils/Untitled_Artwork 24.png" id="4_d5iyh"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8dxen"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
+distance = -43.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0el8h"]
+size = Vector2(7, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5iyh"]
+size = Vector2(7.6187096, 26)
 
 [node name="Period_1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_fy12i")]
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
+
+[node name="Player" parent="." instance=ExtResource("1_fy12i")]
+z_index = 1
+position = Vector2(-36, 20)
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(6, 6)
+
+[node name="Floor dangers!" type="Node" parent="."]
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(51, 28.999998)
+rotation = 0.39523733
+scale = Vector2(0.77156955, 0.74053633)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(28, 33)
+rotation = -0.45051768
+texture = ExtResource("4_d5iyh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, 29)
-shape = SubResource("WorldBoundaryShape2D_8dxen")
+position = Vector2(0, -1)
+shape = SubResource("WorldBoundaryShape2D_0el8h")
+
+[node name="killzone" parent="." instance=ExtResource("2_8dxen")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(29, 32.5)
+shape = SubResource("RectangleShape2D_0el8h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
+position = Vector2(50.097633, 27.538658)
+rotation = -0.39788818
+shape = SubResource("RectangleShape2D_d5iyh")

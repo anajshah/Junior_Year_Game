@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://daygen7iscbl0"]
+
+[ext_resource type="Script" uid="uid://03akxjfubeby" path="res://scripts/winzone.gd" id="1_jpvp6"]
+
+[node name="Winzone" type="Area2D"]
+script = ExtResource("1_jpvp6")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
