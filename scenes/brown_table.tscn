@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce1ns4q1l24jq"]
+
+[ext_resource type="Texture2D" uid="uid://657sft6wrrh0" path="res://assets/sprites/tables/Untitled_Artwork 40.png" id="1_wvdyb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nuerw"]
+size = Vector2(76, 7.5)
+
+[node name="Brown_table" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13, -13)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("1_wvdyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, -16.75)
+shape = SubResource("RectangleShape2D_nuerw")
+one_way_collision = true

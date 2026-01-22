@@ -1,18 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=11 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
-[ext_resource type="Texture2D" uid="uid://coyemx4pp0gdp" path="res://assets/sprites/pencils/Untitled_Artwork 22.png" id="3_0el8h"]
-[ext_resource type="Texture2D" uid="uid://3w8lfjyqg5o7" path="res://assets/sprites/pencils/Untitled_Artwork 24.png" id="4_d5iyh"]
+[ext_resource type="Texture2D" uid="uid://657sft6wrrh0" path="res://assets/sprites/tables/Untitled_Artwork 40.png" id="5_d5iyh"]
+[ext_resource type="Texture2D" uid="uid://5epskqlxevet" path="res://assets/sprites/Scissors/Untitled_Artwork 37.png" id="5_j2f7g"]
+[ext_resource type="Texture2D" uid="uid://q5883nqh0orx" path="res://assets/sprites/Scissors/Untitled_Artwork 38.png" id="6_fo55x"]
+[ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/tables/Untitled_Artwork 42.png" id="7_esdof"]
+[ext_resource type="PackedScene" uid="uid://ce1ns4q1l24jq" path="res://scenes/brown_table.tscn" id="7_gq7po"]
+[ext_resource type="Texture2D" uid="uid://dnp738n8nvmb6" path="res://assets/sprites/tables/Untitled_Artwork 44.png" id="8_30wkr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
 distance = -43.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0el8h"]
-size = Vector2(7, 19)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5iyh"]
-size = Vector2(7.6187096, 26)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gq7po"]
+size = Vector2(16, 27)
 
 [node name="Period_1" type="Node2D"]
 
@@ -23,24 +24,13 @@ format = 2
 
 [node name="Player" parent="." instance=ExtResource("1_fy12i")]
 z_index = 1
-position = Vector2(-36, 20)
+position = Vector2(-76, -20)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(6, 6)
 
 [node name="Floor dangers!" type="Node" parent="."]
-
-[node name="UntitledArtwork22" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(51, 28.999998)
-rotation = 0.39523733
-scale = Vector2(0.77156955, 0.74053633)
-texture = ExtResource("3_0el8h")
-
-[node name="UntitledArtwork24" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(28, 33)
-rotation = -0.45051768
-texture = ExtResource("4_d5iyh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -50,11 +40,94 @@ shape = SubResource("WorldBoundaryShape2D_0el8h")
 
 [node name="killzone" parent="." instance=ExtResource("2_8dxen")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(29, 32.5)
-shape = SubResource("RectangleShape2D_0el8h")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-75, 28.5)
+shape = SubResource("RectangleShape2D_gq7po")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
-position = Vector2(50.097633, 27.538658)
-rotation = -0.39788818
-shape = SubResource("RectangleShape2D_d5iyh")
+[node name="UntitledArtwork37" type="Sprite2D" parent="."]
+position = Vector2(-73, 27)
+texture = ExtResource("5_j2f7g")
+
+[node name="Brown_table" parent="." instance=ExtResource("7_gq7po")]
+position = Vector2(-96, 17)
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="."]
+position = Vector2(7, -24)
+scale = Vector2(0.96, 2.6)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="."]
+position = Vector2(328.99997, -23)
+scale = Vector2(9.84, 2.56)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="."]
+position = Vector2(163.5, -110)
+scale = Vector2(1.82, 1)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork43" type="Sprite2D" parent="."]
+position = Vector2(282, -165)
+scale = Vector2(1.88, 1)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="."]
+position = Vector2(323.25, -217)
+scale = Vector2(9.789999, 1)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork45" type="Sprite2D" parent="."]
+position = Vector2(455, -266)
+scale = Vector2(1.44, 1.72)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="."]
+position = Vector2(400.5, -243.5)
+scale = Vector2(1.2333333, 1.2333333)
+texture = ExtResource("6_fo55x")
+
+[node name="UntitledArtwork46" type="Sprite2D" parent="."]
+position = Vector2(683.5, -181.5)
+scale = Vector2(1.82, 9.379999)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork48" type="Sprite2D" parent="."]
+position = Vector2(871, -119)
+scale = Vector2(0.4367998, 0.4058001)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork47" type="Sprite2D" parent="."]
+position = Vector2(792, -167)
+scale = Vector2(0.56, 0.54)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork49" type="Sprite2D" parent="."]
+position = Vector2(934.99994, -83)
+scale = Vector2(0.46, 0.42000002)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork50" type="Sprite2D" parent="."]
+position = Vector2(1002, -45)
+scale = Vector2(0.56, 0.58)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork51" type="Sprite2D" parent="."]
+position = Vector2(1450.25, -50)
+scale = Vector2(13.509997, 0.72)
+texture = ExtResource("5_d5iyh")
+
+[node name="UntitledArtwork52" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(353.00006, -87)
+scale = Vector2(1037.9999, 118.3)
+texture = ExtResource("7_esdof")
+
+[node name="UntitledArtwork55" type="Sprite2D" parent="."]
+position = Vector2(349, 65.999985)
+scale = Vector2(52.11, 52.00001)
+texture = ExtResource("8_30wkr")
+
+[node name="UntitledArtwork56" type="Sprite2D" parent="."]
+position = Vector2(297, 118)
+scale = Vector2(52.11, 52.00001)
+texture = ExtResource("8_30wkr")
