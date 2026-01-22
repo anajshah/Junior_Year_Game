@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd4pc4gt3yjc6"]
+
+[ext_resource type="Texture2D" uid="uid://bqhrkph3yr5v7" path="res://assets/sprites/tables/Untitled_Artwork 50.png" id="1_x4eyw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvv3r"]
+size = Vector2(30.5, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vje01"]
+size = Vector2(30, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_314fp"]
+size = Vector2(29, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sc0v2"]
+size = Vector2(30, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2eox"]
+size = Vector2(40, 3)
+
+[node name="Right_shelf" type="AnimatableBody2D"]
+
+[node name="UntitledArtwork50" type="Sprite2D" parent="."]
+position = Vector2(23, -34)
+scale = Vector2(2, 2.2)
+texture = ExtResource("1_x4eyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(22, -6)
+shape = SubResource("RectangleShape2D_pvv3r")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(22, -21.5)
+shape = SubResource("RectangleShape2D_vje01")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(22.5, -52.5)
+shape = SubResource("RectangleShape2D_314fp")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(22, -37)
+shape = SubResource("RectangleShape2D_sc0v2")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(25, -65.5)
+shape = SubResource("RectangleShape2D_w2eox")
+one_way_collision = true
