@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-const SPEED = 400.0
+const SPEED = 100.0
 @onready var timer: Timer = $Timer
 
 var player_pos: float
 var other_pos: float
 var player: CharacterBody2D
 var direction = -1
-
+var stop = 0
 
 func _ready():
 	var scene_root = get_tree().current_scene
@@ -20,7 +20,8 @@ func _physics_process(delta: float) -> void:
 	player_pos = global_position.x
 	other_pos = player.global_position.x
 	print(other_pos-player_pos)
-	if abs(other_pos - player_pos) <= 1:
+	if abs(other_pos - player_pos) <= 5:
+		velocity.x = stop
 		timer.start()
 	
 	#if (other_pos - player_pos)<0:
@@ -37,13 +38,13 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_timer_timeout() -> void:
-	direction = direction * -1
-	#if (other_pos - player_pos)<0:
-		#direction = -1
-		#print("move left")
-	#elif(other_pos - player_pos)>0:
-		#direction = 1
-		#print("move right")
+	#direction = direction * -1
+	if (other_pos - player_pos)<0:
+		direction = -1
+		print("move left")
+	elif(other_pos - player_pos)>0:
+		direction = 1
+		print("move right")
 
 
 
