@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuy685h58renk"]
+
+[ext_resource type="Texture2D" uid="uid://b3b2eogg0t7mo" path="res://assets/sprites/Scissors/Untitled_Artwork 35.png" id="1_r0hhw"]
+[ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_a5iux"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2s0tu"]
+radius = 5.0
+height = 22.0
+
+[node name="Dustbunny" type="AnimatableBody2D"]
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="."]
+position = Vector2(9, -15)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_r0hhw")
+
+[node name="killzone" parent="." instance=ExtResource("2_a5iux")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(9, -13)
+shape = SubResource("CapsuleShape2D_2s0tu")
