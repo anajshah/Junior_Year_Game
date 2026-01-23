@@ -1,24 +1,32 @@
 extends CharacterBody2D
 
-@onready var player = $Player
-var player_x: float
+const SPEED = 100.0
+@onready var timer: Timer = $Timer
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-var player_pos: Vector2
+var player_pos: float
+var other_pos: float
+var player: CharacterBody2D
+
+func _ready():
+	var scene_root = get_tree().current_scene
+	player = scene_root.get_node_or_null("Player")
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	player_pos = global_position
-	#print (player_pos)
-	player_x = player.global_position.x
-	print(player_x)
-	#if direction:
-		#velocity.x = direction * SPEED
-	#else:
-		#velocity.x = move_toward(velocity.x, 0, SPEED)
+	var direction = 0
+	player_pos = global_position.x
+	other_pos = player.global_position.x
+	
+	if (other_pos - player_pos)<0:
+		direction = -1
+		print("move left")
+	elif (other_pos - player_pos)>0:
+		direction = 1
+		print("move right")
+		
+	
+	
+	velocity.x = direction * SPEED
 
 	move_and_slide()

@@ -17,7 +17,7 @@ position = Vector2(0, -1)
 shape = SubResource("WorldBoundaryShape2D_pacw4")
 
 [node name="Gatsbys_car" parent="." instance=ExtResource("1_un7mv")]
-position = Vector2(115.99999, -37)
+position = Vector2(155.00002, -94)
 scale = Vector2(0.1, 0.1)
 
 [node name="Player" parent="." instance=ExtResource("2_af0un")]
