@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=34 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
@@ -22,6 +22,9 @@
 [ext_resource type="PackedScene" uid="uid://dd4pc4gt3yjc6" path="res://scenes/right_shelf.tscn" id="20_pc5ky"]
 [ext_resource type="Texture2D" uid="uid://lx0wxqpu3f2j" path="res://assets/sprites/props/Untitled_Artwork 47.png" id="21_2i2o0"]
 [ext_resource type="Texture2D" uid="uid://byly64sfx75pb" path="res://assets/sprites/props/Untitled_Artwork 48.png" id="22_rq68m"]
+[ext_resource type="PackedScene" uid="uid://cskuebjam21ag" path="res://scenes/beige_shelf_left.tscn" id="23_n1dk6"]
+[ext_resource type="PackedScene" uid="uid://daq2ocbdukstq" path="res://scenes/beige_shelf_middle.tscn" id="24_5tmgo"]
+[ext_resource type="PackedScene" uid="uid://ckchhvxtuhb40" path="res://scenes/beige_shelf_right.tscn" id="25_5tmgo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
 distance = -43.0
@@ -44,13 +47,10 @@ size = Vector2(10, 12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pc5ky"]
 size = Vector2(31, 9)
 
-[node name="Period_1" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tmgo"]
+size = Vector2(20, 4)
 
-[node name="Plain background" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(353.00006, -87)
-scale = Vector2(1037.9999, 118.3)
-texture = ExtResource("7_esdof")
+[node name="Period_1" type="Node2D"]
 
 [node name="Floor tiles" type="Node" parent="."]
 
@@ -66,7 +66,7 @@ texture = ExtResource("8_30wkr")
 
 [node name="Player" parent="." instance=ExtResource("1_fy12i")]
 z_index = 1
-position = Vector2(-1771, -10)
+position = Vector2(-1773, 0)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -106,6 +106,10 @@ shape = SubResource("RectangleShape2D_5v15o")
 position = Vector2(-1249.5, 35.5)
 shape = SubResource("RectangleShape2D_pc5ky")
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-1612, 2)
+shape = SubResource("RectangleShape2D_5tmgo")
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Brown_table" parent="Platforms" instance=ExtResource("7_gq7po")]
@@ -144,6 +148,26 @@ position = Vector2(-1674, -7)
 [node name="White_table11" parent="Platforms" instance=ExtResource("5_esdof")]
 position = Vector2(-1231, 28)
 
+[node name="Beige_shelf_left" parent="Platforms" instance=ExtResource("23_n1dk6")]
+position = Vector2(12, -20)
+scale = Vector2(2.5, 2.5)
+
+[node name="beige_shelf_middle" parent="Platforms" instance=ExtResource("24_5tmgo")]
+position = Vector2(136, -20)
+scale = Vector2(0.23, 0.23)
+
+[node name="beige_shelf_middle2" parent="Platforms" instance=ExtResource("24_5tmgo")]
+position = Vector2(235.00002, -20)
+scale = Vector2(0.23, 0.23)
+
+[node name="beige_shelf_middle3" parent="Platforms" instance=ExtResource("24_5tmgo")]
+position = Vector2(334, -20)
+scale = Vector2(0.23, 0.23)
+
+[node name="beige_shelf_right" parent="Platforms" instance=ExtResource("25_5tmgo")]
+position = Vector2(436, -15.000001)
+scale = Vector2(0.599, 0.599)
+
 [node name="to be replaced" type="Node" parent="."]
 
 [node name="UntitledArtwork40" type="Sprite2D" parent="to be replaced"]
@@ -164,11 +188,6 @@ texture = ExtResource("5_d5iyh")
 [node name="UntitledArtwork43" type="Sprite2D" parent="to be replaced"]
 position = Vector2(282, -165)
 scale = Vector2(1.88, 1)
-texture = ExtResource("5_d5iyh")
-
-[node name="UntitledArtwork44" type="Sprite2D" parent="to be replaced"]
-position = Vector2(323.25, -217)
-scale = Vector2(9.789999, 1)
 texture = ExtResource("5_d5iyh")
 
 [node name="UntitledArtwork45" type="Sprite2D" parent="to be replaced"]
@@ -276,6 +295,12 @@ rotation = -2.3604922
 scale = Vector2(0.8392278, 0.86286014)
 texture = ExtResource("11_cc3xn")
 
+[node name="Plain background" type="Sprite2D" parent="Floor dangers!"]
+z_index = -1
+position = Vector2(353.00006, -87)
+scale = Vector2(1037.9999, 118.3)
+texture = ExtResource("7_esdof")
+
 [node name="Shelves" type="Node" parent="."]
 
 [node name="left_shelf" parent="Shelves" instance=ExtResource("18_5v15o")]
@@ -324,3 +349,8 @@ texture = ExtResource("21_2i2o0")
 position = Vector2(-1009, -73)
 scale = Vector2(0.43333092, 0.39166674)
 texture = ExtResource("22_rq68m")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="."]
+position = Vector2(-1611.0001, 3)
+rotation = -0.78897935
+texture = ExtResource("13_3vlql")
