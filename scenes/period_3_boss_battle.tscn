@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://duv2kownh4cio"]
+
+[ext_resource type="PackedScene" uid="uid://bhspqnb84ulck" path="res://scenes/gatsbys_car.tscn" id="1_un7mv"]
+[ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="2_af0un"]
+[ext_resource type="Texture2D" uid="uid://cwijihxmxyu3j" path="res://assets/sprites/Scissors/Untitled_Artwork 33.png" id="3_af0un"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pacw4"]
+distance = -43.0
+
+[node name="Period_3_boss_Battle" type="Node2D"]
+
+[node name="Standing_floor" type="StaticBody2D" parent="."]
+position = Vector2(33, -58)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(0, -1)
+shape = SubResource("WorldBoundaryShape2D_pacw4")
+
+[node name="Gatsbys_car" parent="." instance=ExtResource("1_un7mv")]
+position = Vector2(115.99999, -37)
+scale = Vector2(0.1, 0.1)
+
+[node name="Player" parent="." instance=ExtResource("2_af0un")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(23.039642, -49.99832)
+scale = Vector2(0.1, 0.1)
+offset = Vector2(0, -30)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="."]
+position = Vector2(-64, -29)
+texture = ExtResource("3_af0un")

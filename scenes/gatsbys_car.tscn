@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhspqnb84ulck"]
+
+[ext_resource type="Script" uid="uid://ilt61u0qmjat" path="res://scripts/gatsbys_car.gd" id="1_vagbq"]
+[ext_resource type="Texture2D" uid="uid://b5g3uy3qi1g3w" path="res://assets/sprites/pencils/Untitled_Artwork 15.png" id="2_vagbq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jvv5d"]
+radius = 231.26175
+
+[node name="Gatsbys_car" type="CharacterBody2D"]
+script = ExtResource("1_vagbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-246, -266)
+shape = SubResource("CircleShape2D_jvv5d")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="."]
+position = Vector2(-259, -246.99998)
+scale = Vector2(23.4, 23.4)
+texture = ExtResource("2_vagbq")

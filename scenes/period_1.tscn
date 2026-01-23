@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=36 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dq8jypy5d807a" path="res://scenes/middle_shelf.tscn" id="19_pc5ky"]
 [ext_resource type="PackedScene" uid="uid://dd4pc4gt3yjc6" path="res://scenes/right_shelf.tscn" id="20_pc5ky"]
 [ext_resource type="Texture2D" uid="uid://lx0wxqpu3f2j" path="res://assets/sprites/props/Untitled_Artwork 47.png" id="21_2i2o0"]
+[ext_resource type="Texture2D" uid="uid://ceu7ib3qclte4" path="res://assets/sprites/pencils/Untitled_Artwork 26.png" id="21_qif2t"]
 [ext_resource type="Texture2D" uid="uid://byly64sfx75pb" path="res://assets/sprites/props/Untitled_Artwork 48.png" id="22_rq68m"]
 [ext_resource type="PackedScene" uid="uid://cskuebjam21ag" path="res://scenes/beige_shelf_left.tscn" id="23_n1dk6"]
 [ext_resource type="PackedScene" uid="uid://daq2ocbdukstq" path="res://scenes/beige_shelf_middle.tscn" id="24_5tmgo"]
@@ -49,6 +50,9 @@ size = Vector2(31, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tmgo"]
 size = Vector2(20, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dpta"]
+size = Vector2(23, 4.5)
 
 [node name="Period_1" type="Node2D"]
 
@@ -109,6 +113,10 @@ shape = SubResource("RectangleShape2D_pc5ky")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="killzone"]
 position = Vector2(-1612, 2)
 shape = SubResource("RectangleShape2D_5tmgo")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-1376, 2.75)
+shape = SubResource("RectangleShape2D_8dpta")
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -179,26 +187,6 @@ texture = ExtResource("5_d5iyh")
 position = Vector2(328.99997, -23)
 scale = Vector2(9.84, 2.56)
 texture = ExtResource("5_d5iyh")
-
-[node name="UntitledArtwork42" type="Sprite2D" parent="to be replaced"]
-position = Vector2(163.5, -110)
-scale = Vector2(1.82, 1)
-texture = ExtResource("5_d5iyh")
-
-[node name="UntitledArtwork43" type="Sprite2D" parent="to be replaced"]
-position = Vector2(282, -165)
-scale = Vector2(1.88, 1)
-texture = ExtResource("5_d5iyh")
-
-[node name="UntitledArtwork45" type="Sprite2D" parent="to be replaced"]
-position = Vector2(455, -266)
-scale = Vector2(1.44, 1.72)
-texture = ExtResource("5_d5iyh")
-
-[node name="UntitledArtwork38" type="Sprite2D" parent="to be replaced"]
-position = Vector2(400.5, -243.5)
-scale = Vector2(1.2333333, 1.2333333)
-texture = ExtResource("6_fo55x")
 
 [node name="UntitledArtwork46" type="Sprite2D" parent="to be replaced"]
 position = Vector2(683.5, -181.5)
@@ -300,6 +288,11 @@ z_index = -1
 position = Vector2(353.00006, -87)
 scale = Vector2(1037.9999, 118.3)
 texture = ExtResource("7_esdof")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-1377, 3)
+rotation = 0.7974641
+texture = ExtResource("21_qif2t")
 
 [node name="Shelves" type="Node" parent="."]
 

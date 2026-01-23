@@ -1,3 +1,44 @@
-[gd_scene format=3 uid="uid://b8j7h26ny4cfv"]
+[gd_scene load_steps=5 format=3 uid="uid://b8j7h26ny4cfv"]
+
+[ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_srwj2"]
+[ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/tables/Untitled_Artwork 42.png" id="2_cekvv"]
+[ext_resource type="Texture2D" uid="uid://dnp738n8nvmb6" path="res://assets/sprites/tables/Untitled_Artwork 44.png" id="3_nf734"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ntpgs"]
+distance = -43.0
 
 [node name="Period_3" type="Node2D"]
+
+[node name="Standing_floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(0, -1)
+shape = SubResource("WorldBoundaryShape2D_ntpgs")
+
+[node name="Player" parent="." instance=ExtResource("1_srwj2")]
+z_index = 1
+position = Vector2(0, -1)
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -30)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="Plain background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(353.00006, -87)
+scale = Vector2(1037.9999, 118.3)
+texture = ExtResource("2_cekvv")
+
+[node name="Floor tiles" type="Node" parent="."]
+
+[node name="Top Floor tile" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(349, 65.999985)
+scale = Vector2(52.11, 52.00001)
+texture = ExtResource("3_nf734")
+
+[node name="Bottom Floor tile" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(297, 118)
+scale = Vector2(52.11, 52.00001)
+texture = ExtResource("3_nf734")
