@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://duv2kownh4cio"]
+[gd_scene load_steps=7 format=3 uid="uid://duv2kownh4cio"]
 
 [ext_resource type="PackedScene" uid="uid://bhspqnb84ulck" path="res://scenes/gatsbys_car.tscn" id="1_un7mv"]
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="2_af0un"]
+[ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_p1iko"]
 [ext_resource type="Texture2D" uid="uid://cwijihxmxyu3j" path="res://assets/sprites/Scissors/Untitled_Artwork 33.png" id="3_af0un"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pacw4"]
 distance = -43.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chp20"]
+radius = 163.15012
 
 [node name="Period_3_boss_Battle" type="Node2D"]
 
@@ -19,6 +23,12 @@ shape = SubResource("WorldBoundaryShape2D_pacw4")
 [node name="Gatsbys_car" parent="." instance=ExtResource("1_un7mv")]
 position = Vector2(155.00002, -94)
 scale = Vector2(0.1, 0.1)
+
+[node name="killzone2" parent="Gatsbys_car" instance=ExtResource("2_p1iko")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gatsbys_car/killzone2"]
+position = Vector2(-133, -157)
+shape = SubResource("CircleShape2D_chp20")
 
 [node name="Player" parent="." instance=ExtResource("2_af0un")]
 
