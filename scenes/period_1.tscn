@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=41 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://daq2ocbdukstq" path="res://scenes/beige_shelf_middle.tscn" id="24_5tmgo"]
 [ext_resource type="PackedScene" uid="uid://ckchhvxtuhb40" path="res://scenes/beige_shelf_right.tscn" id="25_5tmgo"]
 [ext_resource type="PackedScene" uid="uid://cuy685h58renk" path="res://scenes/dustbunny.tscn" id="27_8dpta"]
+[ext_resource type="PackedScene" uid="uid://dknmt1hxs6uph" path="res://scenes/cupboard_openable.tscn" id="28_caj2x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
 distance = -43.0
@@ -133,7 +134,7 @@ texture = ExtResource("8_30wkr")
 
 [node name="Player" parent="." instance=ExtResource("1_fy12i")]
 z_index = 1
-position = Vector2(-1773, 0)
+position = Vector2(-112, -53)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -184,7 +185,8 @@ shape = SubResource("RectangleShape2D_8dpta")
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Brown_table" parent="Platforms" instance=ExtResource("7_gq7po")]
-position = Vector2(-96, 17)
+position = Vector2(-114, 7)
+scale = Vector2(1.5, 1.5)
 
 [node name="White_table" parent="Platforms" instance=ExtResource("5_esdof")]
 position = Vector2(-1158, 28)
@@ -240,21 +242,6 @@ position = Vector2(436, -15.000001)
 scale = Vector2(0.599, 0.599)
 
 [node name="to be replaced" type="Node" parent="."]
-
-[node name="UntitledArtwork40" type="Sprite2D" parent="to be replaced"]
-position = Vector2(7, -24)
-scale = Vector2(0.96, 2.6)
-texture = ExtResource("5_d5iyh")
-
-[node name="UntitledArtwork41" type="Sprite2D" parent="to be replaced"]
-position = Vector2(328.99997, -23)
-scale = Vector2(9.84, 2.56)
-texture = ExtResource("5_d5iyh")
-
-[node name="UntitledArtwork46" type="Sprite2D" parent="to be replaced"]
-position = Vector2(683.5, -181.5)
-scale = Vector2(1.82, 9.379999)
-texture = ExtResource("5_d5iyh")
 
 [node name="UntitledArtwork48" type="Sprite2D" parent="to be replaced"]
 position = Vector2(871, -119)
@@ -421,3 +408,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_0l143")
 }
 autoplay = "move"
+
+[node name="cupboard_openable2" parent="." instance=ExtResource("28_caj2x")]
+position = Vector2(334, 40)
+scale = Vector2(4, 4)
+
+[node name="cupboard_openable" parent="." instance=ExtResource("28_caj2x")]
+position = Vector2(17, 40)
+scale = Vector2(4, 4)
