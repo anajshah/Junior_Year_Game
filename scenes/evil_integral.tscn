@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c12c661cwnjde"]
+[gd_scene load_steps=26 format=3 uid="uid://c12c661cwnjde"]
 
 [ext_resource type="Texture2D" uid="uid://ca745sqirc1ck" path="res://assets/sprites/props/Untitled_Artwork 57.png" id="1_4qx46"]
 [ext_resource type="Script" uid="uid://coljagqtigvmf" path="res://scripts/evil_integral.gd" id="1_ievad"]
@@ -76,6 +76,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_5tph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_srlon")
@@ -222,37 +225,44 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
 }],
-"loop": true,
+"loop": false,
 "name": &"y=x^2",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv2us"]
-size = Vector2(442.04645, 271.96933)
 
 [node name="evil-integral" type="AnimatableBody2D"]
 script = ExtResource("1_ievad")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.42415035, 0)
 scale = Vector2(0.6075447, 0.56131846)
 sprite_frames = SubResource("SpriteFrames_dem7l")
-animation = &"y=x"
+animation = &"y=x^2"
 autoplay = "default"
-frame = 29
-frame_progress = 1.0
 centered = false
-offset = Vector2(-12.934782, -170)
+offset = Vector2(-11.288813, -170)
 
 [node name="killzone" parent="." instance=ExtResource("12_wo61d")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(252.11374, -57.967083)
-rotation = -0.77761835
-shape = SubResource("RectangleShape2D_qv2us")
-disabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="killzone"]
 scale = Vector2(0.5514619, 0.55146194)
 polygon = PackedVector2Array(1, 1, 9, -50, 26, -90, 47, -117, 63, -128, 78, -132, 87, -132, 97, -130, 107, -125, 117, -118, 127, -108, 141, -87, 153, -58, 160, -31, 164, -1)
+disabled = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="killzone"]
+polygon = PackedVector2Array(0, 0, 126, -115, 274, -116, 274, 0)
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

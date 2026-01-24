@@ -10,19 +10,19 @@ size = Vector2(80, 2)
 size = Vector2(11, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_044bj"]
-size = Vector2(11, 17)
+size = Vector2(11, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t01p8"]
-size = Vector2(12, 17)
+size = Vector2(12, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0f4gl"]
-size = Vector2(11, 17)
+size = Vector2(11, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaqqb"]
-size = Vector2(11, 17)
+size = Vector2(11, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpnae"]
-size = Vector2(12, 17)
+size = Vector2(12, 18)
 
 [node name="cupboard_openable" type="Node2D"]
 script = ExtResource("1_p2sqq")
@@ -38,27 +38,27 @@ shape = SubResource("RectangleShape2D_p2sqq")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(8.5, -11)
+position = Vector2(9, -9)
 shape = SubResource("RectangleShape2D_kf15g")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(21.5, -10.5)
+position = Vector2(21.5, -10)
 shape = SubResource("RectangleShape2D_044bj")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(35, -10.5)
+position = Vector2(35, -10)
 shape = SubResource("RectangleShape2D_t01p8")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(47.5, -10.5)
+position = Vector2(47.5, -10)
 shape = SubResource("RectangleShape2D_0f4gl")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(59.5, -10.5)
+position = Vector2(59.5, -10)
 shape = SubResource("RectangleShape2D_eaqqb")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(72, -10.5)
+position = Vector2(72, -10)
 shape = SubResource("RectangleShape2D_dpnae")
 
 [node name="UntitledArtwork80" type="Sprite2D" parent="."]

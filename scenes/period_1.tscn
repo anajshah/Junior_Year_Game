@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=37 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://cskuebjam21ag" path="res://scenes/beige_shelf_left.tscn" id="23_n1dk6"]
 [ext_resource type="PackedScene" uid="uid://daq2ocbdukstq" path="res://scenes/beige_shelf_middle.tscn" id="24_5tmgo"]
 [ext_resource type="PackedScene" uid="uid://ckchhvxtuhb40" path="res://scenes/beige_shelf_right.tscn" id="25_5tmgo"]
-[ext_resource type="PackedScene" uid="uid://cuy685h58renk" path="res://scenes/dustbunny.tscn" id="27_8dpta"]
 [ext_resource type="PackedScene" uid="uid://dknmt1hxs6uph" path="res://scenes/cupboard_openable.tscn" id="28_caj2x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
@@ -55,68 +54,6 @@ size = Vector2(20, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dpta"]
 size = Vector2(23, 4.5)
-
-[sub_resource type="Animation" id="Animation_8dpta"]
-resource_name = "move"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-619, -67), Vector2(-635, -83), Vector2(-654.00006, -56)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-2.3297946, -0.28401637]
-}
-
-[sub_resource type="Animation" id="Animation_caj2x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-619, -67)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-2.3297946]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0l143"]
-_data = {
-&"RESET": SubResource("Animation_caj2x"),
-&"move": SubResource("Animation_8dpta")
-}
 
 [node name="Period_1" type="Node2D"]
 
@@ -397,17 +334,6 @@ texture = ExtResource("22_rq68m")
 position = Vector2(-1611.0001, 3)
 rotation = -0.78897935
 texture = ExtResource("13_3vlql")
-
-[node name="Dustbunny" parent="." instance=ExtResource("27_8dpta")]
-z_index = 1
-position = Vector2(-619, -67)
-rotation = -2.3297946
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Dustbunny"]
-libraries = {
-&"": SubResource("AnimationLibrary_0l143")
-}
-autoplay = "move"
 
 [node name="cupboard_openable2" parent="." instance=ExtResource("28_caj2x")]
 position = Vector2(334, 40)
