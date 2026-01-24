@@ -23,7 +23,7 @@ zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_14km5")]
-position = Vector2(68, -65)
+position = Vector2(-112, -156)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -44,4 +44,5 @@ scale = Vector2(0.1908482, 0.1908482)
 texture = ExtResource("2_8et7k")
 
 [node name="evil-integral" parent="." instance=ExtResource("3_7733r")]
-position = Vector2(-13, -103)
+position = Vector2(-105, 0)
+scale = Vector2(2.2, 2.2)

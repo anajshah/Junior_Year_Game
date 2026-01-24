@@ -1,6 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://c12c661cwnjde"]
+[gd_scene load_steps=16 format=3 uid="uid://c12c661cwnjde"]
 
 [ext_resource type="Texture2D" uid="uid://ca745sqirc1ck" path="res://assets/sprites/props/Untitled_Artwork 57.png" id="1_4qx46"]
+[ext_resource type="Script" uid="uid://coljagqtigvmf" path="res://scripts/evil_integral.gd" id="1_ievad"]
+[ext_resource type="Texture2D" uid="uid://dmpvufn16bmk5" path="res://assets/sprites/props/Untitled_Artwork 66.png" id="2_5vt1j"]
+[ext_resource type="Texture2D" uid="uid://d1m7ogapso4ay" path="res://assets/sprites/props/Untitled_Artwork 65.png" id="3_eovmp"]
+[ext_resource type="Texture2D" uid="uid://sooc6lack0ur" path="res://assets/sprites/props/Untitled_Artwork 64.png" id="4_srlon"]
+[ext_resource type="Texture2D" uid="uid://bivh1aornayx6" path="res://assets/sprites/props/Untitled_Artwork 63.png" id="5_5tph3"]
+[ext_resource type="Texture2D" uid="uid://bgjyx25bmb5uc" path="res://assets/sprites/props/Untitled_Artwork 62.png" id="6_ievad"]
+[ext_resource type="Texture2D" uid="uid://crj1bt0xgml8v" path="res://assets/sprites/props/Untitled_Artwork 61.png" id="7_wo61d"]
+[ext_resource type="Texture2D" uid="uid://b040mlfdxputg" path="res://assets/sprites/props/Untitled_Artwork 60.png" id="8_qv2us"]
+[ext_resource type="Texture2D" uid="uid://bbjnck2nhk02k" path="res://assets/sprites/props/Untitled_Artwork 67.png" id="10_5tph3"]
+[ext_resource type="Texture2D" uid="uid://dip6mxjl86gem" path="res://assets/sprites/props/Untitled_Artwork 68.png" id="10_srlon"]
+[ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="12_wo61d"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43aq0"]
+load_path = "res://.godot/imported/Untitled_Artwork 59.png-03227509f580c198abdf45013e95052c.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dem7l"]
 animations = [{
@@ -11,9 +25,123 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5vt1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eovmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5tph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ievad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wo61d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qv2us")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_43aq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5tph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5tph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5tph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_srlon")
+}],
+"loop": false,
+"name": &"y=x",
+"speed": 6.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"y=x^2",
+"speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv2us"]
+size = Vector2(442.04645, 271.96933)
+
 [node name="evil-integral" type="AnimatableBody2D"]
+script = ExtResource("1_ievad")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(85, -85)
 sprite_frames = SubResource("SpriteFrames_dem7l")
+autoplay = "default"
+
+[node name="killzone" parent="." instance=ExtResource("12_wo61d")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(252.11374, -57.967083)
+rotation = -0.77761835
+shape = SubResource("RectangleShape2D_qv2us")
+disabled = true

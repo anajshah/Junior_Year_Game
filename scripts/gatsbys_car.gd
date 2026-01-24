@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	player_pos = global_position.x
 	other_pos = player.global_position.x
-	print(other_pos-player_pos)
+
 	if abs(other_pos - player_pos) <= 5:
 		velocity.x = stop
 		timer.start()
