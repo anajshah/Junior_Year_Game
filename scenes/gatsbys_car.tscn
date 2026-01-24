@@ -20,6 +20,6 @@ scale = Vector2(15.033334, 15.900001)
 texture = ExtResource("2_vagbq")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.3
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

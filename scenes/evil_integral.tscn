@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c12c661cwnjde"]
+
+[ext_resource type="Texture2D" uid="uid://ca745sqirc1ck" path="res://assets/sprites/props/Untitled_Artwork 57.png" id="1_4qx46"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dem7l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4qx46")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="evil-integral" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dem7l")

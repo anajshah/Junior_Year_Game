@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg7hwprgulp2m"]
+
+[ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_14km5"]
+[ext_resource type="Texture2D" uid="uid://c7ky15utwsnq2" path="res://assets/sprites/props/IMG_2538.jpg" id="2_8et7k"]
+[ext_resource type="PackedScene" uid="uid://c12c661cwnjde" path="res://scenes/evil_integral.tscn" id="3_7733r"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8et7k"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7733r"]
+normal = Vector2(1, 0)
+distance = -125.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_puyso"]
+normal = Vector2(-1, 0)
+distance = -261.0
+
+[node name="period_2_boss_battle" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(68, -65)
+offset = Vector2(0, -30)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_14km5")]
+position = Vector2(68, -65)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(61, 0)
+shape = SubResource("WorldBoundaryShape2D_8et7k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_7733r")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_puyso")
+
+[node name="Img2538" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(68.00001, -106.00001)
+scale = Vector2(0.1908482, 0.1908482)
+texture = ExtResource("2_8et7k")
+
+[node name="evil-integral" parent="." instance=ExtResource("3_7733r")]
+position = Vector2(-13, -103)

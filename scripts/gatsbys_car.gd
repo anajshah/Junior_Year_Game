@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
+const SPEED = 200.0
 @onready var timer: Timer = $Timer
 
 var player_pos: float

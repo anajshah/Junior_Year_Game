@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://duv2kownh4cio"]
+[gd_scene load_steps=9 format=3 uid="uid://duv2kownh4cio"]
 
 [ext_resource type="PackedScene" uid="uid://bhspqnb84ulck" path="res://scenes/gatsbys_car.tscn" id="1_un7mv"]
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="2_af0un"]
@@ -7,6 +7,14 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pacw4"]
 distance = -43.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p1iko"]
+normal = Vector2(1, 0)
+distance = -203.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_chp20"]
+normal = Vector2(-1, 0)
+distance = -217.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_chp20"]
 radius = 163.15012
@@ -17,8 +25,15 @@ radius = 163.15012
 position = Vector2(33, -58)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Standing_floor"]
-position = Vector2(0, -1)
+position = Vector2(-11, 23)
 shape = SubResource("WorldBoundaryShape2D_pacw4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Standing_floor"]
+shape = SubResource("WorldBoundaryShape2D_p1iko")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(-33, 1)
+shape = SubResource("WorldBoundaryShape2D_chp20")
 
 [node name="Gatsbys_car" parent="." instance=ExtResource("1_un7mv")]
 position = Vector2(155.00002, -94)
@@ -30,14 +45,14 @@ scale = Vector2(0.1, 0.1)
 position = Vector2(-133, -157)
 shape = SubResource("CircleShape2D_chp20")
 
-[node name="Player" parent="." instance=ExtResource("2_af0un")]
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(23.039642, -49.99832)
 scale = Vector2(0.1, 0.1)
 offset = Vector2(0, -30)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_af0un")]
 
 [node name="UntitledArtwork33" type="Sprite2D" parent="."]
 position = Vector2(-64, -29)
