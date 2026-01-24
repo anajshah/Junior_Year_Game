@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c12c661cwnjde"]
+[gd_scene load_steps=27 format=3 uid="uid://c12c661cwnjde"]
 
 [ext_resource type="Texture2D" uid="uid://ca745sqirc1ck" path="res://assets/sprites/props/Untitled_Artwork 57.png" id="1_4qx46"]
 [ext_resource type="Script" uid="uid://coljagqtigvmf" path="res://scripts/evil_integral.gd" id="1_ievad"]
@@ -11,7 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://b040mlfdxputg" path="res://assets/sprites/props/Untitled_Artwork 60.png" id="8_qv2us"]
 [ext_resource type="Texture2D" uid="uid://bbjnck2nhk02k" path="res://assets/sprites/props/Untitled_Artwork 67.png" id="10_5tph3"]
 [ext_resource type="Texture2D" uid="uid://dip6mxjl86gem" path="res://assets/sprites/props/Untitled_Artwork 68.png" id="10_srlon"]
+[ext_resource type="Texture2D" uid="uid://dio7kx4rjrcwn" path="res://assets/sprites/props/Untitled_Artwork 69.png" id="12_cw5th"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="12_wo61d"]
+[ext_resource type="Texture2D" uid="uid://bpts5jc3tqggx" path="res://assets/sprites/props/Untitled_Artwork 70.png" id="13_u46ls"]
+[ext_resource type="Texture2D" uid="uid://ct3hngcpnp88l" path="res://assets/sprites/props/Untitled_Artwork 71.png" id="14_dwkyv"]
+[ext_resource type="Texture2D" uid="uid://by48d0vi1jsv5" path="res://assets/sprites/props/Untitled_Artwork 72.png" id="15_iagon"]
+[ext_resource type="Texture2D" uid="uid://j6bxaoj1cmdd" path="res://assets/sprites/props/Untitled_Artwork 73.png" id="16_fs8kx"]
+[ext_resource type="Texture2D" uid="uid://bnpj724yro05r" path="res://assets/sprites/props/Untitled_Artwork 74.png" id="17_pnyw7"]
+[ext_resource type="Texture2D" uid="uid://g6lnpehvmme5" path="res://assets/sprites/props/Untitled_Artwork 75.png" id="18_qq3cm"]
+[ext_resource type="Texture2D" uid="uid://bi7cyeuxq4fa7" path="res://assets/sprites/props/Untitled_Artwork 76.png" id="19_kgdm2"]
+[ext_resource type="Texture2D" uid="uid://bhpemn68xhhx8" path="res://assets/sprites/props/Untitled_Artwork 77.png" id="20_tk4t4"]
+[ext_resource type="Texture2D" uid="uid://bc1rkdwwpfc6" path="res://assets/sprites/props/Untitled_Artwork 78.png" id="21_vgftg"]
+[ext_resource type="Texture2D" uid="uid://cgr64ej84k8k4" path="res://assets/sprites/props/Untitled_Artwork 79.png" id="22_lev3d"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43aq0"]
 load_path = "res://.godot/imported/Untitled_Artwork 59.png-03227509f580c198abdf45013e95052c.ctex"
@@ -121,7 +132,97 @@ animations = [{
 "name": &"y=x",
 "speed": 6.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_cw5th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u46ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dwkyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_iagon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fs8kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pnyw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qq3cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kgdm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tk4t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vgftg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vgftg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lev3d")
+}],
 "loop": true,
 "name": &"y=x^2",
 "speed": 5.0
@@ -134,9 +235,15 @@ size = Vector2(442.04645, 271.96933)
 script = ExtResource("1_ievad")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(85, -85)
+position = Vector2(-0.42415035, 0)
+scale = Vector2(0.6075447, 0.56131846)
 sprite_frames = SubResource("SpriteFrames_dem7l")
+animation = &"y=x"
 autoplay = "default"
+frame = 29
+frame_progress = 1.0
+centered = false
+offset = Vector2(-12.934782, -170)
 
 [node name="killzone" parent="." instance=ExtResource("12_wo61d")]
 
@@ -145,3 +252,7 @@ position = Vector2(252.11374, -57.967083)
 rotation = -0.77761835
 shape = SubResource("RectangleShape2D_qv2us")
 disabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="killzone"]
+scale = Vector2(0.5514619, 0.55146194)
+polygon = PackedVector2Array(1, 1, 9, -50, 26, -90, 47, -117, 63, -128, 78, -132, 87, -132, 97, -130, 107, -125, 117, -118, 127, -108, 141, -87, 153, -58, 160, -31, 164, -1)
