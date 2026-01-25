@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cg7hwprgulp2m"]
+[gd_scene load_steps=8 format=3 uid="uid://cg7hwprgulp2m"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_14km5"]
 [ext_resource type="Texture2D" uid="uid://c7ky15utwsnq2" path="res://assets/sprites/props/IMG_2538.jpg" id="2_8et7k"]
@@ -13,6 +13,9 @@ distance = -125.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_puyso"]
 normal = Vector2(-1, 0)
 distance = -261.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7733r"]
+b = Vector2(10, 0)
 
 [node name="period_2_boss_battle" type="Node2D"]
 
@@ -37,6 +40,66 @@ shape = SubResource("WorldBoundaryShape2D_7733r")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_puyso")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-110, -18)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-110, -34)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-110, -50)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-111, -67)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-109, -83)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-109, -99)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-109, -115)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-110, -132)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-109, -147)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-109, -163)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-109, -179)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-110, -196)
+shape = SubResource("SegmentShape2D_7733r")
+one_way_collision = true
+
 [node name="Img2538" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(68.00001, -106.00001)
@@ -46,3 +109,5 @@ texture = ExtResource("2_8et7k")
 [node name="evil-integral" parent="." instance=ExtResource("3_7733r")]
 position = Vector2(-104, 0)
 scale = Vector2(2.2, 2.2)
+
+[node name="Node" type="Node" parent="."]

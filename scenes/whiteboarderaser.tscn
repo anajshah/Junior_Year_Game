@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://byqw13dhuv3rv"]
+
+[ext_resource type="Texture2D" uid="uid://b0knb2lhi8wqt" path="res://assets/sprites/props/Untitled_Artwork 100.png" id="1_otcv8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otcv8"]
+size = Vector2(22, 8)
+
+[node name="Whiteboarderaser" type="AnimatableBody2D"]
+
+[node name="UntitledArtwork100" type="Sprite2D" parent="."]
+position = Vector2(11, -11)
+texture = ExtResource("1_otcv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -11)
+shape = SubResource("RectangleShape2D_otcv8")
+one_way_collision = true

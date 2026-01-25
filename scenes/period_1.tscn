@@ -1,9 +1,8 @@
-[gd_scene load_steps=37 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=51 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
 [ext_resource type="Texture2D" uid="uid://coyemx4pp0gdp" path="res://assets/sprites/pencils/Untitled_Artwork 22.png" id="3_0el8h"]
-[ext_resource type="Texture2D" uid="uid://657sft6wrrh0" path="res://assets/sprites/tables/Untitled_Artwork 40.png" id="5_d5iyh"]
 [ext_resource type="PackedScene" uid="uid://dfb4yqnr7xith" path="res://scenes/white_table.tscn" id="5_esdof"]
 [ext_resource type="Texture2D" uid="uid://5epskqlxevet" path="res://assets/sprites/Scissors/Untitled_Artwork 37.png" id="5_j2f7g"]
 [ext_resource type="Texture2D" uid="uid://q5883nqh0orx" path="res://assets/sprites/Scissors/Untitled_Artwork 38.png" id="6_fo55x"]
@@ -26,7 +25,22 @@
 [ext_resource type="PackedScene" uid="uid://cskuebjam21ag" path="res://scenes/beige_shelf_left.tscn" id="23_n1dk6"]
 [ext_resource type="PackedScene" uid="uid://daq2ocbdukstq" path="res://scenes/beige_shelf_middle.tscn" id="24_5tmgo"]
 [ext_resource type="PackedScene" uid="uid://ckchhvxtuhb40" path="res://scenes/beige_shelf_right.tscn" id="25_5tmgo"]
+[ext_resource type="Texture2D" uid="uid://cwijihxmxyu3j" path="res://assets/sprites/Scissors/Untitled_Artwork 33.png" id="25_caj2x"]
+[ext_resource type="Texture2D" uid="uid://bjlu3t5hb3uk3" path="res://assets/sprites/pencils/Untitled_Artwork 20.png" id="26_v864k"]
+[ext_resource type="Texture2D" uid="uid://bgj750iqk8ydb" path="res://assets/sprites/pencils/Untitled_Artwork 25.png" id="27_aqxet"]
+[ext_resource type="Texture2D" uid="uid://b1cqa2nkv0rlo" path="res://assets/sprites/pencils/Untitled_Artwork 16.png" id="28_8o61j"]
 [ext_resource type="PackedScene" uid="uid://dknmt1hxs6uph" path="res://scenes/cupboard_openable.tscn" id="28_caj2x"]
+[ext_resource type="Texture2D" uid="uid://cwfa7vg56w6xg" path="res://assets/sprites/pencils/Untitled_Artwork 18.png" id="29_dw78v"]
+[ext_resource type="PackedScene" uid="uid://dx135p0pq8kbo" path="res://scenes/b_whiteboard_mark_cap.tscn" id="29_rg1j5"]
+[ext_resource type="PackedScene" uid="uid://byqw13dhuv3rv" path="res://scenes/whiteboarderaser.tscn" id="30_iwj0x"]
+[ext_resource type="Texture2D" uid="uid://c4x8niq6b65ki" path="res://assets/sprites/props/Untitled_Artwork 102.png" id="31_rwjik"]
+[ext_resource type="Texture2D" uid="uid://da1dkcivga0n1" path="res://assets/sprites/props/Untitled_Artwork 89.png" id="32_mtmdm"]
+[ext_resource type="Texture2D" uid="uid://d2pggx6a0xito" path="res://assets/sprites/pencils/Untitled_Artwork 19.png" id="32_rh6vc"]
+[ext_resource type="Texture2D" uid="uid://bw62027es4s5t" path="res://assets/sprites/pencils/Untitled_Artwork 12.png" id="33_iw6yt"]
+[ext_resource type="Texture2D" uid="uid://chr20r03qiw45" path="res://assets/sprites/props/Untitled_Artwork 105.png" id="38_a42wt"]
+[ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://scenes/Untitled_Artwork 106.png" id="39_1jsxm"]
+[ext_resource type="Texture2D" uid="uid://b5g3uy3qi1g3w" path="res://assets/sprites/pencils/Untitled_Artwork 15.png" id="40_dkp7m"]
+[ext_resource type="Texture2D" uid="uid://3w8lfjyqg5o7" path="res://assets/sprites/pencils/Untitled_Artwork 24.png" id="41_bboc0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
 distance = -43.0
@@ -178,32 +192,43 @@ scale = Vector2(0.23, 0.23)
 position = Vector2(436, -15.000001)
 scale = Vector2(0.599, 0.599)
 
-[node name="to be replaced" type="Node" parent="."]
+[node name="Shelves" type="Node" parent="."]
 
-[node name="UntitledArtwork48" type="Sprite2D" parent="to be replaced"]
-position = Vector2(871, -119)
-scale = Vector2(0.4367998, 0.4058001)
-texture = ExtResource("5_d5iyh")
+[node name="left_shelf" parent="Shelves" instance=ExtResource("18_5v15o")]
+position = Vector2(-1096, 43.999985)
+scale = Vector2(0.35, 0.35)
 
-[node name="UntitledArtwork47" type="Sprite2D" parent="to be replaced"]
-position = Vector2(792, -167)
-scale = Vector2(0.56, 0.54)
-texture = ExtResource("5_d5iyh")
+[node name="middle_shelf" parent="Shelves" instance=ExtResource("19_pc5ky")]
+position = Vector2(-1051, 40)
+scale = Vector2(1.95, 1.95)
 
-[node name="UntitledArtwork49" type="Sprite2D" parent="to be replaced"]
-position = Vector2(934.99994, -83)
-scale = Vector2(0.46, 0.42000002)
-texture = ExtResource("5_d5iyh")
+[node name="middle_shelf2" parent="Shelves" instance=ExtResource("19_pc5ky")]
+position = Vector2(-959, 40)
+scale = Vector2(1.95, 1.95)
 
-[node name="UntitledArtwork50" type="Sprite2D" parent="to be replaced"]
-position = Vector2(1002, -45)
-scale = Vector2(0.56, 0.58)
-texture = ExtResource("5_d5iyh")
+[node name="Right_shelf" parent="Shelves" instance=ExtResource("20_pc5ky")]
+position = Vector2(-333, 42)
+scale = Vector2(2.88, 2.88)
 
-[node name="UntitledArtwork51" type="Sprite2D" parent="to be replaced"]
-position = Vector2(1450.25, -50)
-scale = Vector2(13.509997, 0.72)
-texture = ExtResource("5_d5iyh")
+[node name="middle_shelf3" parent="Shelves" instance=ExtResource("19_pc5ky")]
+position = Vector2(-865.99994, 40.000004)
+scale = Vector2(1.95, 1.95)
+
+[node name="middle_shelf4" parent="Shelves" instance=ExtResource("19_pc5ky")]
+position = Vector2(-775, 40.000008)
+scale = Vector2(1.95, 1.95)
+
+[node name="middle_shelf5" parent="Shelves" instance=ExtResource("19_pc5ky")]
+position = Vector2(-682, 40.000008)
+scale = Vector2(1.95, 1.95)
+
+[node name="middle_shelf6" parent="Shelves" instance=ExtResource("19_pc5ky")]
+position = Vector2(-589.99994, 40)
+scale = Vector2(1.95, 1.95)
+
+[node name="middle_shelf7" parent="Shelves" instance=ExtResource("19_pc5ky")]
+position = Vector2(-497.99997, 40)
+scale = Vector2(1.95, 1.95)
 
 [node name="Floor dangers!" type="Node" parent="."]
 
@@ -281,43 +306,120 @@ position = Vector2(-1377, 3)
 rotation = 0.7974641
 texture = ExtResource("21_qif2t")
 
-[node name="Shelves" type="Node" parent="."]
+[node name="UntitledArtwork33" type="Sprite2D" parent="Floor dangers!"]
+z_index = 1
+position = Vector2(-992.99994, 5.9999995)
+rotation = -1.572285
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_caj2x")
 
-[node name="left_shelf" parent="Shelves" instance=ExtResource("18_5v15o")]
-position = Vector2(-1096, 43.999985)
-scale = Vector2(0.35, 0.35)
+[node name="UntitledArtwork40" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-937, -37)
+texture = ExtResource("5_j2f7g")
 
-[node name="middle_shelf" parent="Shelves" instance=ExtResource("19_pc5ky")]
-position = Vector2(-1051, 40)
-scale = Vector2(1.95, 1.95)
+[node name="UntitledArtwork41" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-921, -37)
+texture = ExtResource("6_fo55x")
 
-[node name="middle_shelf2" parent="Shelves" instance=ExtResource("19_pc5ky")]
-position = Vector2(-959, 40)
-scale = Vector2(1.95, 1.95)
+[node name="UntitledArtwork42" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-904, -37)
+texture = ExtResource("16_g58lu")
 
-[node name="Right_shelf" parent="Shelves" instance=ExtResource("20_pc5ky")]
-position = Vector2(-333, 42)
-scale = Vector2(2.88, 2.88)
+[node name="UntitledArtwork43" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-888, -37)
+texture = ExtResource("5_j2f7g")
 
-[node name="middle_shelf3" parent="Shelves" instance=ExtResource("19_pc5ky")]
-position = Vector2(-865.99994, 40.000004)
-scale = Vector2(1.95, 1.95)
+[node name="UntitledArtwork25" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-714, -72.99997)
+rotation = -0.7920144
+texture = ExtResource("3_0el8h")
 
-[node name="middle_shelf4" parent="Shelves" instance=ExtResource("19_pc5ky")]
-position = Vector2(-775, 40.000008)
-scale = Vector2(1.95, 1.95)
+[node name="UntitledArtwork20" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-717, -81.99997)
+rotation = 0.8084637
+texture = ExtResource("26_v864k")
 
-[node name="middle_shelf5" parent="Shelves" instance=ExtResource("19_pc5ky")]
-position = Vector2(-682, 40.000008)
-scale = Vector2(1.95, 1.95)
+[node name="UntitledArtwork27" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-715, -89.000015)
+rotation = -0.7576566
+scale = Vector2(1.4011439, 1.3794833)
+texture = ExtResource("27_aqxet")
 
-[node name="middle_shelf6" parent="Shelves" instance=ExtResource("19_pc5ky")]
-position = Vector2(-589.99994, 40)
-scale = Vector2(1.95, 1.95)
+[node name="UntitledArtwork16" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-711, -97.99998)
+rotation = -0.7843136
+scale = Vector2(1.1936669, 1.1777884)
+texture = ExtResource("28_8o61j")
 
-[node name="middle_shelf7" parent="Shelves" instance=ExtResource("19_pc5ky")]
-position = Vector2(-497.99997, 40)
-scale = Vector2(1.95, 1.95)
+[node name="UntitledArtwork28" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-750.99994, -72.99999)
+rotation = 2.4120862
+scale = Vector2(1.569791, 1.5494441)
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-752, -79.99997)
+rotation = 0.7779287
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-749.00006, -88)
+rotation = -2.3148408
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(-749.0001, -97.00003)
+rotation = -0.71177727
+texture = ExtResource("17_g58lu")
+
+[node name="b_whiteboard_mark_cap" parent="Floor dangers!" instance=ExtResource("29_rg1j5")]
+position = Vector2(902, -105)
+
+[node name="Whiteboarderaser" parent="Floor dangers!" instance=ExtResource("30_iwj0x")]
+position = Vector2(875, -7)
+
+[node name="UntitledArtwork102" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(813.00006, 61)
+scale = Vector2(10.5, 10.5)
+texture = ExtResource("31_rwjik")
+
+[node name="UntitledArtwork103" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1083, 68)
+scale = Vector2(14.6, 14.6)
+texture = ExtResource("31_rwjik")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1077, 34)
+rotation = 0.84643066
+texture = ExtResource("32_rh6vc")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1111, 37)
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1125, 34)
+rotation = 0.47045502
+texture = ExtResource("28_8o61j")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1116, 35)
+texture = ExtResource("17_g58lu")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1052, 30.999954)
+rotation = -0.42857653
+scale = Vector2(1.5007796, 1.5007796)
+texture = ExtResource("21_qif2t")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1044, 35)
+rotation = 0.5889706
+texture = ExtResource("32_rh6vc")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1037, 37)
+texture = ExtResource("33_iw6yt")
 
 [node name="Decor" type="Node" parent="."]
 
@@ -329,6 +431,11 @@ texture = ExtResource("21_2i2o0")
 position = Vector2(-1009, -73)
 scale = Vector2(0.43333092, 0.39166674)
 texture = ExtResource("22_rq68m")
+
+[node name="UntitledArtwork89" type="Sprite2D" parent="Decor"]
+position = Vector2(-796, 11)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("32_mtmdm")
 
 [node name="UntitledArtwork21" type="Sprite2D" parent="."]
 position = Vector2(-1611.0001, 3)
@@ -342,3 +449,75 @@ scale = Vector2(4, 4)
 [node name="cupboard_openable" parent="." instance=ExtResource("28_caj2x")]
 position = Vector2(17, 40)
 scale = Vector2(4, 4)
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="."]
+position = Vector2(967, -108.000015)
+scale = Vector2(4.2000003, 4.2000003)
+texture = ExtResource("38_a42wt")
+
+[node name="Whiteboarderaser" parent="." instance=ExtResource("30_iwj0x")]
+position = Vector2(773, -6)
+
+[node name="b_whiteboard_mark_cap" parent="." instance=ExtResource("29_rg1j5")]
+position = Vector2(1036, -167)
+
+[node name="Whiteboarderaser2" parent="." instance=ExtResource("30_iwj0x")]
+position = Vector2(1147, -5)
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="."]
+position = Vector2(1543, 8.000008)
+rotation = 0.7371228
+scale = Vector2(3.4545455, 3.4545455)
+texture = ExtResource("39_1jsxm")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="."]
+position = Vector2(1157, 34)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="."]
+position = Vector2(1063, 35)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="."]
+position = Vector2(1145, 36)
+texture = ExtResource("11_cc3xn")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="."]
+position = Vector2(1134, 34)
+texture = ExtResource("17_g58lu")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="."]
+position = Vector2(1142, 33.00003)
+rotation = 1.8543694
+texture = ExtResource("21_qif2t")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="."]
+position = Vector2(1159, 44)
+texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="."]
+position = Vector2(1056, 37)
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="."]
+position = Vector2(1086, 34)
+rotation = 1.3475707
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="."]
+position = Vector2(1093, 34)
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="."]
+position = Vector2(1097, 35)
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="."]
+position = Vector2(1104, 36.000034)
+rotation = -1.027622
+scale = Vector2(1.4703202, 1.4703202)
+texture = ExtResource("41_bboc0")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="."]
+position = Vector2(1076, 33)
+texture = ExtResource("40_dkp7m")

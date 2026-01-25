@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx135p0pq8kbo"]
+
+[ext_resource type="Texture2D" uid="uid://gjvft172cpuh" path="res://assets/sprites/props/Untitled_Artwork 98.png" id="1_whj7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3lmk"]
+size = Vector2(43, 6)
+
+[node name="b_whiteboard_mark_cap" type="AnimatableBody2D"]
+
+[node name="UntitledArtwork98" type="Sprite2D" parent="."]
+position = Vector2(32.99999, -7.999996)
+rotation = -1.5694336
+texture = ExtResource("1_whj7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(37.5, -8)
+shape = SubResource("RectangleShape2D_l3lmk")
