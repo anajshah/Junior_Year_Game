@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgwh4s5siev15"]
+
+[ext_resource type="Texture2D" uid="uid://da1dkcivga0n1" path="res://assets/sprites/props/Untitled_Artwork 89.png" id="1_jr1w4"]
+[ext_resource type="Script" uid="uid://4tbkull5e412" path="res://scripts/paper_trash.gd" id="1_mgbqn"]
+[ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_mgbqn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ixb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jr1w4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4r71d"]
+radius = 19.026299
+
+[node name="paper_trash" type="Node2D"]
+script = ExtResource("1_mgbqn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0ixb8")
+
+[node name="killzone" parent="." instance=ExtResource("2_mgbqn")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-2, 2)
+shape = SubResource("CircleShape2D_4r71d")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(25, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-27, 0)

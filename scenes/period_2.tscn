@@ -1,3 +1,606 @@
-[gd_scene format=3 uid="uid://cf7ry0g7u5ehu"]
+[gd_scene load_steps=15 format=3 uid="uid://cf7ry0g7u5ehu"]
+
+[ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/tables/Untitled_Artwork 42.png" id="1_fw228"]
+[ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="3_kwge0"]
+[ext_resource type="Texture2D" uid="uid://cll0tg1jqq14s" path="res://assets/sprites/props/Untitled_Artwork 83.png" id="3_yemwy"]
+[ext_resource type="Texture2D" uid="uid://xk4lux8tjvj4" path="res://assets/sprites/props/Untitled_Artwork 82.png" id="4_esx1j"]
+[ext_resource type="Texture2D" uid="uid://drujhrambge15" path="res://assets/sprites/props/Untitled_Artwork 84.png" id="4_xmqja"]
+[ext_resource type="Texture2D" uid="uid://1odtylo4h5v5" path="res://assets/sprites/props/Untitled_Artwork 86.png" id="5_u5a1m"]
+[ext_resource type="Texture2D" uid="uid://btqe8ctk2js5t" path="res://assets/sprites/props/Untitled_Artwork 85.png" id="6_8e13w"]
+[ext_resource type="Texture2D" uid="uid://bdag6des55643" path="res://assets/sprites/props/Untitled_Artwork 87.png" id="7_o3yrh"]
+[ext_resource type="PackedScene" uid="uid://bgwh4s5siev15" path="res://scenes/paper_trash.tscn" id="9_8e13w"]
+[ext_resource type="PackedScene" uid="uid://dfb4yqnr7xith" path="res://scenes/white_table.tscn" id="9_xmqja"]
+[ext_resource type="Texture2D" uid="uid://coppoulerng21" path="res://assets/sprites/props/Untitled_Artwork 88.png" id="10_u5a1m"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1ma0l"]
+distance = -43.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o3yrh"]
+normal = Vector2(1, 0)
+distance = -1023.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ooi0n"]
+normal = Vector2(-1, 0)
 
 [node name="Period_2" type="Node2D"]
+
+[node name="Floor tiles" type="Node" parent="."]
+
+[node name="Plain background" type="Sprite2D" parent="Floor tiles"]
+visible = false
+z_index = -1
+position = Vector2(353.00003, -87)
+scale = Vector2(1037.9999, 118.3)
+texture = ExtResource("1_fw228")
+
+[node name="UntitledArtwork82" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(513, -87)
+scale = Vector2(4822.9995, 217.75)
+texture = ExtResource("4_esx1j")
+
+[node name="UntitledArtwork83" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-174, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork84" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-74, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork86" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(126, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork85" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(26, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork87" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(226, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="UntitledArtwork88" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(326.5, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork89" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(426.5, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork90" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(626.5, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork91" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(526.5, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork92" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(726.5, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="UntitledArtwork93" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-1174.5, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork94" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-1074.5, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork95" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-874.5, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork96" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-974.5, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork97" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-774.5, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="UntitledArtwork98" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-674, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork99" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-574, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork100" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-374, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork101" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-474, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork102" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-274, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="UntitledArtwork103" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1827, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork104" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1927, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2127, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2027, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2227, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2327.5, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2427.5, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2627.5, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2527.5, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(2727.5, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(826.5, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(926.5, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1126.5, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1026.5, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1226.5, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1327, 65)
+texture = ExtResource("3_yemwy")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1427, 65)
+texture = ExtResource("4_xmqja")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1627, 65)
+texture = ExtResource("5_u5a1m")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1527, 65)
+texture = ExtResource("6_8e13w")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(1727, 65)
+texture = ExtResource("7_o3yrh")
+
+[node name="Player" parent="." instance=ExtResource("3_kwge0")]
+z_index = 1
+position = Vector2(-750, -8)
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -60)
+zoom = Vector2(3, 3)
+limit_left = -1200
+limit_right = 2750
+position_smoothing_enabled = true
+
+[node name="Standing_floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(0, -1)
+shape = SubResource("WorldBoundaryShape2D_1ma0l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(-13563, 4)
+shape = SubResource("WorldBoundaryShape2D_o3yrh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(2728, -18)
+shape = SubResource("WorldBoundaryShape2D_ooi0n")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="White_table" parent="Node" instance=ExtResource("9_xmqja")]
+position = Vector2(-764, 27)
+
+[node name="White_table2" parent="Node" instance=ExtResource("9_xmqja")]
+position = Vector2(-566, 27)
+
+[node name="White_table3" parent="Node" instance=ExtResource("9_xmqja")]
+position = Vector2(-368, 27)
+
+[node name="White_table4" parent="Node" instance=ExtResource("9_xmqja")]
+position = Vector2(-168, 27)
+
+[node name="UntitledArtwork88" type="Sprite2D" parent="Node"]
+position = Vector2(-665, -68)
+scale = Vector2(2.1175, 2.1175)
+texture = ExtResource("10_u5a1m")
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="paper_trash" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-1009, 26)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash2" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-871, 26)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash3" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-678, 28)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash4" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-489, 26)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash5" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-366, 28)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash6" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-1772, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash7" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-1619, 24)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash8" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-1441, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash9" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-1252, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash10" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-1129, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash11" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-2530, 19)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash12" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-2377, 20)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash13" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-2199, 21)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash14" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-2010, 19)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash15" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-1887, 21)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash16" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-3335, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash17" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-3182, 24)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash18" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-3004, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash19" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-2815, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash20" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-2692, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash21" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-4098, 20)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash22" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-3945, 21)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash23" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-3767, 22)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash24" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-3578, 20)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash25" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-3455, 22)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash26" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-4856, 16)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash27" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-4703, 17)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash28" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-4525, 18)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash29" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-4336, 16)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash30" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-4213, 18)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash31" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-5647, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash32" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-5494, 24)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash33" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-5316, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash34" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-5127, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash35" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-5004, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash36" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-6410, 20)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash37" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-6257, 21)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash38" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-6079, 22)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash39" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-5890, 20)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash40" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-5767, 22)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash41" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-7168, 16)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash42" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-7015, 17)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash43" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-6837, 18)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash44" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-6648, 16)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash45" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-6525, 18)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash46" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-7941, 26)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash47" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-7788, 27)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash48" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-7610, 28)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash49" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-7421, 26)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash50" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-7298, 28)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash51" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-8704, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash52" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-8551, 24)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash53" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-8373, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash54" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-8184, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash55" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-8061, 25)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash56" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-9462, 19)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash57" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-9309, 20)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash58" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-9131, 21)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash59" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-8942, 19)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash60" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-8819, 21)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash61" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-10256, 16)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash62" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-10103, 17)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash63" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-9925, 18)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash64" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-9736, 16)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash65" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-9613, 18)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash66" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-11019, 13)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash67" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-10866, 14)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash68" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-10688, 15)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash69" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-10499, 13)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash70" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-10376, 15)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash71" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-11777, 9)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash72" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-11624, 10)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash73" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-11446, 11)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash74" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-11257, 9)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash75" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-11134, 11)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash76" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-12579, 4)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash77" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-12426, 5)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash78" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-12248, 6)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash79" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-12059, 4)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash80" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-11936, 6)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash81" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-13342, 1)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash82" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-13189, 2)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash83" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-13011, 3)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash84" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-12822, 1)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash85" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-12699, 3)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash86" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-14100, -3)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash87" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-13947, -2)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash88" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-13769, -1)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash89" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-13580, -3)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash90" parent="Node2" instance=ExtResource("9_8e13w")]
+position = Vector2(-13457, -1)
+scale = Vector2(0.5, 0.5)
