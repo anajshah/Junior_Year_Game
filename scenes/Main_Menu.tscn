@@ -1,6 +1,99 @@
-[gd_scene load_steps=2 format=3 uid="uid://3shsgxysecsc"]
+[gd_scene load_steps=9 format=3 uid="uid://cgxthm5kfe3jx"]
 
-[ext_resource type="Script" uid="uid://b3qxbjiigx4yu" path="res://scripts/main_menu.gd" id="1_jfien"]
+[ext_resource type="Script" uid="uid://b3qxbjiigx4yu" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://xk4lux8tjvj4" path="res://assets/sprites/props/Untitled_Artwork 82.png" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://cs1jdg07pc8mm" path="res://assets/fonts/PixelOperator8.ttf" id="4_8ln24"]
+[ext_resource type="FontFile" uid="uid://b4ywddyju4rrv" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://scenes/Untitled_Artwork 106.png" id="6_rtw2f"]
 
-[node name="Main_Menu" type="Node2D"]
-script = ExtResource("1_jfien")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
+texture = ExtResource("2_ekxnf")
+modulate_color = Color(0.6955032, 0.6955031, 0.6955031, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wu84c"]
+distance = -500.0
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="Player" parent="." instance=ExtResource("2_bqqt6")]
+z_index = 1
+position = Vector2(147, 477)
+scale = Vector2(10, 10)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bqqt6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.5
+offset_top = -92.25
+offset_right = 239.5
+offset_bottom = 190.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Period_4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_8ln24")
+theme_override_font_sizes/font_size = 24
+text = "Teacher's Assistant"
+
+[node name="Period_1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_8ln24")
+theme_override_font_sizes/font_size = 24
+text = "Calculus 101"
+
+[node name="Period_2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_8ln24")
+theme_override_font_sizes/font_size = 24
+text = "English 11"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_wu84c")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 118.0
+offset_right = 927.0
+offset_bottom = 182.0
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 64
+text = "Junior Year!"
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="."]
+position = Vector2(975.9999, 362)
+rotation = 0.6789992
+scale = Vector2(14, 14)
+texture = ExtResource("6_rtw2f")
+
+[connection signal="pressed" from="VBoxContainer/Period_4" to="." method="_on_period_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Period_1" to="." method="_on_period_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Period_2" to="." method="_on_period_2_pressed"]

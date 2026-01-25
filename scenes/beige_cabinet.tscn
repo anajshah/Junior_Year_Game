@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2nk1emswjs3u"]
+
+[ext_resource type="Texture2D" uid="uid://cg03wnohk5bfs" path="res://assets/sprites/tables/Untitled_Artwork 107.png" id="1_4k77m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fm6v"]
+size = Vector2(28, 2)
+
+[node name="beige_cabinet" type="AnimatableBody2D"]
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="."]
+position = Vector2(16, -26)
+texture = ExtResource("1_4k77m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, -50)
+shape = SubResource("RectangleShape2D_7fm6v")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=54 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
@@ -41,9 +41,13 @@
 [ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://scenes/Untitled_Artwork 106.png" id="39_1jsxm"]
 [ext_resource type="Texture2D" uid="uid://b5g3uy3qi1g3w" path="res://assets/sprites/pencils/Untitled_Artwork 15.png" id="40_dkp7m"]
 [ext_resource type="Texture2D" uid="uid://3w8lfjyqg5o7" path="res://assets/sprites/pencils/Untitled_Artwork 24.png" id="41_bboc0"]
+[ext_resource type="PackedScene" uid="uid://d2nk1emswjs3u" path="res://scenes/beige_cabinet.tscn" id="42_iwj0x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
 distance = -43.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwjik"]
+size = Vector2(138, 245)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gq7po"]
 size = Vector2(16, 27)
@@ -69,6 +73,9 @@ size = Vector2(20, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dpta"]
 size = Vector2(23, 4.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg1j5"]
+size = Vector2(517.5, 24)
+
 [node name="Period_1" type="Node2D"]
 
 [node name="Floor tiles" type="Node" parent="."]
@@ -85,7 +92,7 @@ texture = ExtResource("8_30wkr")
 
 [node name="Player" parent="." instance=ExtResource("1_fy12i")]
 z_index = 1
-position = Vector2(-112, -53)
+position = Vector2(617, -63)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -98,6 +105,10 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Standing_floor"]
 position = Vector2(0, -1)
 shape = SubResource("WorldBoundaryShape2D_0el8h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(724, -83.5)
+shape = SubResource("RectangleShape2D_rwjik")
 
 [node name="killzone" parent="." instance=ExtResource("2_8dxen")]
 
@@ -132,6 +143,10 @@ shape = SubResource("RectangleShape2D_5tmgo")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="killzone"]
 position = Vector2(-1376, 2.75)
 shape = SubResource("RectangleShape2D_8dpta")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="killzone"]
+position = Vector2(1055, 29)
+shape = SubResource("RectangleShape2D_rg1j5")
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -297,7 +312,7 @@ texture = ExtResource("11_cc3xn")
 
 [node name="Plain background" type="Sprite2D" parent="Floor dangers!"]
 z_index = -1
-position = Vector2(353.00006, -87)
+position = Vector2(380, -88)
 scale = Vector2(1037.9999, 118.3)
 texture = ExtResource("7_esdof")
 
@@ -373,53 +388,424 @@ rotation = -0.71177727
 texture = ExtResource("17_g58lu")
 
 [node name="b_whiteboard_mark_cap" parent="Floor dangers!" instance=ExtResource("29_rg1j5")]
-position = Vector2(902, -105)
+position = Vector2(1123, -43)
 
 [node name="Whiteboarderaser" parent="Floor dangers!" instance=ExtResource("30_iwj0x")]
-position = Vector2(875, -7)
+position = Vector2(1012, -7)
 
 [node name="UntitledArtwork102" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(813.00006, 61)
+position = Vector2(975.00006, 62.000004)
 scale = Vector2(10.5, 10.5)
 texture = ExtResource("31_rwjik")
 
 [node name="UntitledArtwork103" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1083, 68)
+position = Vector2(1132, 67)
 scale = Vector2(14.6, 14.6)
 texture = ExtResource("31_rwjik")
 
 [node name="UntitledArtwork29" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1077, 34)
+position = Vector2(1213.9999, 34)
 rotation = 0.84643066
 texture = ExtResource("32_rh6vc")
 
 [node name="UntitledArtwork30" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1111, 37)
+position = Vector2(1247.9999, 37)
 texture = ExtResource("29_dw78v")
 
 [node name="UntitledArtwork31" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1125, 34)
+position = Vector2(1261.9999, 34)
 rotation = 0.47045502
 texture = ExtResource("28_8o61j")
 
 [node name="UntitledArtwork32" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1116, 35)
+position = Vector2(1252.9999, 35)
 texture = ExtResource("17_g58lu")
 
 [node name="UntitledArtwork35" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1052, 30.999954)
+position = Vector2(1188.9999, 30.99997)
 rotation = -0.42857653
 scale = Vector2(1.5007796, 1.5007796)
 texture = ExtResource("21_qif2t")
 
 [node name="UntitledArtwork44" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1044, 35)
+position = Vector2(1180.9999, 35)
 rotation = 0.5889706
 texture = ExtResource("32_rh6vc")
 
 [node name="UntitledArtwork12" type="Sprite2D" parent="Floor dangers!"]
-position = Vector2(1037, 37)
+position = Vector2(1173.9999, 37)
 texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork45" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1169, 37)
+texture = ExtResource("28_8o61j")
+
+[node name="UntitledArtwork46" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1169, 33.99997)
+rotation = 0.75755084
+texture = ExtResource("27_aqxet")
+
+[node name="UntitledArtwork47" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1131.0001, 39)
+rotation = 1.9292858
+scale = Vector2(1.5909091, 1.5)
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork48" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1126, 32.99997)
+rotation = 0.76218796
+texture = ExtResource("27_aqxet")
+
+[node name="UntitledArtwork49" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1119, 29)
+rotation = -0.6097001
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork50" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1108, 36)
+rotation = 0.7929536
+texture = ExtResource("11_stxfu")
+
+[node name="UntitledArtwork51" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1101, 31.00003)
+rotation = 0.15995109
+texture = ExtResource("28_8o61j")
+
+[node name="UntitledArtwork52" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1113.0001, 31)
+rotation = -0.4828249
+texture = ExtResource("41_bboc0")
+
+[node name="UntitledArtwork53" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1097, 36)
+rotation = 1.261308
+texture = ExtResource("17_g58lu")
+
+[node name="UntitledArtwork54" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1086, 32.00003)
+rotation = -0.66214275
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork55" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1079, 29.99997)
+rotation = 0.50411457
+texture = ExtResource("28_8o61j")
+
+[node name="UntitledArtwork56" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1071.0001, 34.999985)
+rotation = 1.3629308
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork57" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1064, 36)
+texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork58" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1059, 28)
+rotation = -0.6758202
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork59" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1059, 34)
+texture = ExtResource("27_aqxet")
+
+[node name="UntitledArtwork60" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1055, 31)
+texture = ExtResource("11_cc3xn")
+
+[node name="UntitledArtwork61" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1045.0001, 31.99997)
+rotation = -0.9007239
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork62" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1041, 37)
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork63" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1041, 38)
+texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork64" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1032.0001, 32.000046)
+rotation = -0.70482546
+scale = Vector2(1.2712597, 1.2712597)
+texture = ExtResource("41_bboc0")
+
+[node name="UntitledArtwork65" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1032, 35)
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork66" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1023, 35)
+rotation = -0.73453254
+texture = ExtResource("17_g58lu")
+
+[node name="UntitledArtwork67" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1029, 37)
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork68" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1019, 30.99997)
+rotation = -1.0823925
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork69" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1013, 40.00003)
+rotation = 0.703647
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork70" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1001, 34)
+rotation = -0.0418185
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork71" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1000.0001, 32.99997)
+rotation = -0.39572504
+texture = ExtResource("26_v864k")
+
+[node name="UntitledArtwork72" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(990, 34)
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork73" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(991, 35.00003)
+rotation = -0.92633873
+texture = ExtResource("21_qif2t")
+
+[node name="UntitledArtwork74" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(984, 38)
+texture = ExtResource("11_stxfu")
+
+[node name="UntitledArtwork75" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(961, 35)
+rotation = 1.1931794
+texture = ExtResource("17_g58lu")
+
+[node name="UntitledArtwork76" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(983.0001, 33)
+rotation = 0.76102716
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork77" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(951, 34)
+rotation = 0.56778073
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork78" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(969, 30.99997)
+rotation = -0.6847743
+texture = ExtResource("26_v864k")
+
+[node name="UntitledArtwork79" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(974, 35.00003)
+rotation = 0.8533309
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork80" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(947, 37)
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork81" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(942, 32.99997)
+rotation = 0.5357232
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork82" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(932, 31)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork83" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(929, 30.999985)
+rotation = -0.39598417
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork84" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(914, 30.99997)
+rotation = 0.66162777
+texture = ExtResource("32_rh6vc")
+
+[node name="UntitledArtwork85" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(922, 36)
+rotation = -0.63226926
+texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork86" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(908, 32)
+texture = ExtResource("28_8o61j")
+
+[node name="UntitledArtwork87" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(903, 33)
+texture = ExtResource("21_qif2t")
+
+[node name="UntitledArtwork88" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(906, 36)
+rotation = -0.80054057
+texture = ExtResource("41_bboc0")
+
+[node name="UntitledArtwork89" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1293.9999, 34)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork90" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1199.9999, 35)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork91" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1281.9999, 36)
+texture = ExtResource("11_cc3xn")
+
+[node name="UntitledArtwork92" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1270.9999, 34)
+texture = ExtResource("17_g58lu")
+
+[node name="UntitledArtwork93" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1278.9999, 33.00003)
+rotation = 1.8543694
+texture = ExtResource("21_qif2t")
+
+[node name="UntitledArtwork94" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1295.9999, 44)
+texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork95" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1192.9999, 37)
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork96" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1222.9999, 34)
+rotation = 1.3475707
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork97" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1229.9999, 34)
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork98" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1233.9999, 35)
+texture = ExtResource("29_dw78v")
+
+[node name="UntitledArtwork99" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1240.9999, 36.000015)
+rotation = -1.027622
+scale = Vector2(1.4703202, 1.4703202)
+texture = ExtResource("41_bboc0")
+
+[node name="UntitledArtwork100" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1212.9999, 33)
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork101" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1160.0001, 30)
+rotation = -0.4577742
+scale = Vector2(1.4090909, 1.4545455)
+texture = ExtResource("41_bboc0")
+
+[node name="UntitledArtwork104" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1152, 31.000061)
+rotation = 0.8838913
+texture = ExtResource("32_rh6vc")
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1149, 38)
+rotation = 0.42687926
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1142, 35)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(1138, 30.000015)
+rotation = 0.8766917
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(889, 37)
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(889, 38)
+texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(880, 35)
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(877, 37)
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(861, 40.00003)
+rotation = 0.703647
+texture = ExtResource("40_dkp7m")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(849, 34)
+rotation = -0.0418185
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(862, 34)
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(863, 35.00003)
+rotation = -0.92633873
+texture = ExtResource("21_qif2t")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(856, 38)
+texture = ExtResource("11_stxfu")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(833, 35)
+rotation = 1.1931794
+texture = ExtResource("17_g58lu")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(855.0001, 33)
+rotation = 0.76102716
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(846, 35.00003)
+rotation = 0.8533309
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(836, 37)
+texture = ExtResource("14_stxfu")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(831, 32.99997)
+rotation = 0.5357232
+texture = ExtResource("13_3vlql")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(821, 31)
+texture = ExtResource("3_0el8h")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(811, 36)
+rotation = -0.63226926
+texture = ExtResource("33_iw6yt")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(797, 32)
+texture = ExtResource("28_8o61j")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(792, 33)
+texture = ExtResource("21_qif2t")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Floor dangers!"]
+position = Vector2(795, 36)
+rotation = -0.80054057
+texture = ExtResource("41_bboc0")
 
 [node name="Decor" type="Node" parent="."]
 
@@ -451,18 +837,18 @@ position = Vector2(17, 40)
 scale = Vector2(4, 4)
 
 [node name="UntitledArtwork105" type="Sprite2D" parent="."]
-position = Vector2(967, -108.000015)
+position = Vector2(1104, -108.000015)
 scale = Vector2(4.2000003, 4.2000003)
 texture = ExtResource("38_a42wt")
 
 [node name="Whiteboarderaser" parent="." instance=ExtResource("30_iwj0x")]
-position = Vector2(773, -6)
+position = Vector2(910, -6)
 
 [node name="b_whiteboard_mark_cap" parent="." instance=ExtResource("29_rg1j5")]
-position = Vector2(1036, -167)
+position = Vector2(1191, -7)
 
 [node name="Whiteboarderaser2" parent="." instance=ExtResource("30_iwj0x")]
-position = Vector2(1147, -5)
+position = Vector2(1283.9999, -5)
 
 [node name="UntitledArtwork106" type="Sprite2D" parent="."]
 position = Vector2(1543, 8.000008)
@@ -470,54 +856,10 @@ rotation = 0.7371228
 scale = Vector2(3.4545455, 3.4545455)
 texture = ExtResource("39_1jsxm")
 
-[node name="UntitledArtwork22" type="Sprite2D" parent="."]
-position = Vector2(1157, 34)
-texture = ExtResource("3_0el8h")
+[node name="beige_cabinet" parent="." instance=ExtResource("42_iwj0x")]
+position = Vector2(644.00006, 48)
+scale = Vector2(5, 5)
 
-[node name="UntitledArtwork23" type="Sprite2D" parent="."]
-position = Vector2(1063, 35)
-texture = ExtResource("3_0el8h")
-
-[node name="UntitledArtwork24" type="Sprite2D" parent="."]
-position = Vector2(1145, 36)
-texture = ExtResource("11_cc3xn")
-
-[node name="UntitledArtwork17" type="Sprite2D" parent="."]
-position = Vector2(1134, 34)
-texture = ExtResource("17_g58lu")
-
-[node name="UntitledArtwork26" type="Sprite2D" parent="."]
-position = Vector2(1142, 33.00003)
-rotation = 1.8543694
-texture = ExtResource("21_qif2t")
-
-[node name="UntitledArtwork12" type="Sprite2D" parent="."]
-position = Vector2(1159, 44)
-texture = ExtResource("33_iw6yt")
-
-[node name="UntitledArtwork18" type="Sprite2D" parent="."]
-position = Vector2(1056, 37)
-texture = ExtResource("29_dw78v")
-
-[node name="UntitledArtwork25" type="Sprite2D" parent="."]
-position = Vector2(1086, 34)
-rotation = 1.3475707
-texture = ExtResource("3_0el8h")
-
-[node name="UntitledArtwork16" type="Sprite2D" parent="."]
-position = Vector2(1093, 34)
-texture = ExtResource("40_dkp7m")
-
-[node name="UntitledArtwork19" type="Sprite2D" parent="."]
-position = Vector2(1097, 35)
-texture = ExtResource("29_dw78v")
-
-[node name="UntitledArtwork27" type="Sprite2D" parent="."]
-position = Vector2(1104, 36.000034)
-rotation = -1.027622
-scale = Vector2(1.4703202, 1.4703202)
-texture = ExtResource("41_bboc0")
-
-[node name="UntitledArtwork15" type="Sprite2D" parent="."]
-position = Vector2(1076, 33)
-texture = ExtResource("40_dkp7m")
+[node name="Whiteboarderaser3" parent="." instance=ExtResource("30_iwj0x")]
+position = Vector2(1083, -50.000004)
+rotation = 0.018286943

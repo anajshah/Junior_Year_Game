@@ -1,25 +1,88 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhspqnb84ulck"]
+[gd_scene load_steps=11 format=3 uid="uid://bhspqnb84ulck"]
 
 [ext_resource type="Script" uid="uid://ilt61u0qmjat" path="res://scripts/gatsbys_car.gd" id="1_vagbq"]
-[ext_resource type="Texture2D" uid="uid://b5g3uy3qi1g3w" path="res://assets/sprites/pencils/Untitled_Artwork 15.png" id="2_vagbq"]
+[ext_resource type="Texture2D" uid="uid://ccnp5v8nat6d1" path="res://scenes/Untitled_Artwork 115.png" id="2_m8rmq"]
+[ext_resource type="Texture2D" uid="uid://c3fvnpwvrmgpi" path="res://scenes/Untitled_Artwork 114.png" id="3_os8fa"]
+[ext_resource type="Texture2D" uid="uid://so3do4g6k2rf" path="res://scenes/Untitled_Artwork 113.png" id="4_lmcod"]
+[ext_resource type="Texture2D" uid="uid://dedp7xmxg667q" path="res://scenes/Untitled_Artwork 112.png" id="5_7i8p8"]
+[ext_resource type="Texture2D" uid="uid://d08v13rrjysqj" path="res://scenes/Untitled_Artwork 110.png" id="6_f37em"]
+[ext_resource type="Texture2D" uid="uid://cr4ohu45q1700" path="res://scenes/Untitled_Artwork 111.png" id="7_kh1mp"]
+[ext_resource type="Texture2D" uid="uid://cp5fpjtwd0s3s" path="res://scenes/Untitled_Artwork 109.png" id="8_os8fa"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3anrj"]
-radius = 94.0
-height = 334.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbjsp"]
+size = Vector2(9, 6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2gk8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m8rmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_os8fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lmcod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7i8p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f37em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kh1mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f37em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kh1mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f37em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kh1mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f37em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kh1mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f37em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kh1mp")
+}],
+"loop": true,
+"name": &"driving",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_os8fa")
+}],
+"loop": true,
+"name": &"straight",
+"speed": 5.0
+}]
 
 [node name="Gatsbys_car" type="CharacterBody2D"]
 script = ExtResource("1_vagbq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-133, -154)
-shape = SubResource("CapsuleShape2D_3anrj")
-
-[node name="UntitledArtwork15" type="Sprite2D" parent="."]
-position = Vector2(-133.5, -134.49998)
-scale = Vector2(15.033334, 15.900001)
-texture = ExtResource("2_vagbq")
+position = Vector2(-19.5, 6)
+shape = SubResource("RectangleShape2D_wbjsp")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2gk8a")
+animation = &"driving"
+autoplay = "driving"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
