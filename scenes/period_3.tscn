@@ -1,11 +1,148 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8j7h26ny4cfv"]
+[gd_scene load_steps=33 format=3 uid="uid://b8j7h26ny4cfv"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_srwj2"]
 [ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/props/Untitled_Artwork 42.png" id="2_cekvv"]
 [ext_resource type="Texture2D" uid="uid://dnp738n8nvmb6" path="res://assets/sprites/tables/Untitled_Artwork 44.png" id="3_nf734"]
+[ext_resource type="Texture2D" uid="uid://q5883nqh0orx" path="res://assets/sprites/Scissors/Untitled_Artwork 38.png" id="4_7rmm0"]
+[ext_resource type="Texture2D" uid="uid://w6tp534c5bic" path="res://assets/sprites/math/Untitled_Artwork 144.png" id="4_qgboi"]
+[ext_resource type="Texture2D" uid="uid://cb3kso0h0f7mp" path="res://assets/sprites/math/Untitled_Artwork 143.png" id="5_8a6c1"]
+[ext_resource type="Texture2D" uid="uid://5epskqlxevet" path="res://assets/sprites/Scissors/Untitled_Artwork 37.png" id="5_cq4ns"]
+[ext_resource type="Texture2D" uid="uid://bbtb76lk3oudr" path="res://assets/sprites/Scissors/Untitled_Artwork 36.png" id="6_7gw05"]
+[ext_resource type="Texture2D" uid="uid://dsqv35m11dowd" path="res://assets/sprites/math/Untitled_Artwork 142.png" id="6_u2o2s"]
+[ext_resource type="Texture2D" uid="uid://db7tx05ebn11q" path="res://assets/sprites/math/Untitled_Artwork 141.png" id="7_01dmm"]
+[ext_resource type="Texture2D" uid="uid://drj73s0jkg2ec" path="res://assets/sprites/math/Untitled_Artwork 138.png" id="8_52fi0"]
+[ext_resource type="PackedScene" uid="uid://dx135p0pq8kbo" path="res://scenes/b_whiteboard_mark_cap.tscn" id="12_oxuyw"]
+[ext_resource type="PackedScene" uid="uid://byqw13dhuv3rv" path="res://scenes/whiteboarderaser.tscn" id="13_75ucn"]
+[ext_resource type="Texture2D" uid="uid://blxanwvlsa5wo" path="res://assets/sprites/props/Untitled_Artwork 101.png" id="14_cq4ns"]
+[ext_resource type="PackedScene" uid="uid://ce1ns4q1l24jq" path="res://scenes/brown_table.tscn" id="14_mcstt"]
+[ext_resource type="Texture2D" uid="uid://cwijihxmxyu3j" path="res://assets/sprites/Scissors/Untitled_Artwork 33.png" id="15_l5lt5"]
+[ext_resource type="PackedScene" uid="uid://dfb4yqnr7xith" path="res://scenes/white_table.tscn" id="15_oxuyw"]
+[ext_resource type="PackedScene" uid="uid://bgwh4s5siev15" path="res://scenes/paper_trash.tscn" id="16_75ucn"]
+[ext_resource type="Texture2D" uid="uid://cx80u5xdtunon" path="res://assets/sprites/Scissors/Untitled_Artwork 34.png" id="16_wgyvs"]
+[ext_resource type="Texture2D" uid="uid://b3b2eogg0t7mo" path="res://assets/sprites/Scissors/Untitled_Artwork 35.png" id="17_1ippt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ntpgs"]
-distance = -43.0
+distance = -49.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gw05"]
+size = Vector2(95, 177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcstt"]
+size = Vector2(20, 26)
+
+[sub_resource type="Animation" id="Animation_7rmm0"]
+resource_name = "move"
+length = 0.75
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.73333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(420, -51), Vector2(420, 49)]
+}
+
+[sub_resource type="Animation" id="Animation_cq4ns"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(420, -51)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7gw05"]
+_data = {
+&"RESET": SubResource("Animation_cq4ns"),
+&"move": SubResource("Animation_7rmm0")
+}
+
+[sub_resource type="Animation" id="Animation_7gw05"]
+resource_name = "move"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(519, -27), Vector2(559, -27)]
+}
+
+[sub_resource type="Animation" id="Animation_oxuyw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(519, -27)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_75ucn"]
+_data = {
+&"RESET": SubResource("Animation_oxuyw"),
+&"move": SubResource("Animation_7gw05")
+}
+
+[sub_resource type="Animation" id="Animation_mcstt"]
+resource_name = "move"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(688, -26), Vector2(623, -26)]
+}
+
+[sub_resource type="Animation" id="Animation_l5lt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(688, -26)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wgyvs"]
+_data = {
+&"RESET": SubResource("Animation_l5lt5"),
+&"move": SubResource("Animation_mcstt")
+}
 
 [node name="Period_3" type="Node2D"]
 
@@ -14,6 +151,34 @@ distance = -43.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Standing_floor"]
 position = Vector2(0, -1)
 shape = SubResource("WorldBoundaryShape2D_ntpgs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(1314.5, -43.5)
+shape = SubResource("RectangleShape2D_7gw05")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(1505, 30)
+shape = SubResource("RectangleShape2D_mcstt")
+
+[node name="Whiteboarderaser" parent="Standing_floor" instance=ExtResource("13_75ucn")]
+position = Vector2(2099, 45.000004)
+rotation = -1.5927784
+
+[node name="paper_trash" parent="Standing_floor" instance=ExtResource("16_75ucn")]
+position = Vector2(1673, 34)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash2" parent="Standing_floor" instance=ExtResource("16_75ucn")]
+position = Vector2(1767, 33)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash3" parent="Standing_floor" instance=ExtResource("16_75ucn")]
+position = Vector2(1875, 34)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash4" parent="Standing_floor" instance=ExtResource("16_75ucn")]
+position = Vector2(1984, 34)
+scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("1_srwj2")]
 z_index = 1
@@ -25,20 +190,231 @@ offset = Vector2(0, -30)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
-[node name="Plain background" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(353.00006, -87)
-scale = Vector2(1037.9999, 118.3)
-texture = ExtResource("2_cekvv")
-
 [node name="Floor tiles" type="Node" parent="."]
 
 [node name="Top Floor tile" type="Sprite2D" parent="Floor tiles"]
-position = Vector2(349, 65.999985)
+position = Vector2(1407.4999, 70.749985)
 scale = Vector2(52.11, 52.00001)
 texture = ExtResource("3_nf734")
 
 [node name="Bottom Floor tile" type="Sprite2D" parent="Floor tiles"]
-position = Vector2(297, 118)
+position = Vector2(1355.4999, 122.75)
 scale = Vector2(52.11, 52.00001)
 texture = ExtResource("3_nf734")
+
+[node name="Plain background" type="Sprite2D" parent="Floor tiles"]
+z_index = -1
+position = Vector2(1412, -82)
+scale = Vector2(1037.9999, 118.3)
+texture = ExtResource("2_cekvv")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(413, 29)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(430, 29)
+texture = ExtResource("5_cq4ns")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(447, 29)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(464, 29)
+texture = ExtResource("5_cq4ns")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Background"]
+position = Vector2(146, -76.5)
+scale = Vector2(2.06, 2.06)
+texture = ExtResource("4_qgboi")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Background"]
+position = Vector2(639.5, -80.75)
+scale = Vector2(2.13, 2.13)
+texture = ExtResource("5_8a6c1")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Background"]
+position = Vector2(1141.5, -81.25001)
+scale = Vector2(1.9500003, 1.9500003)
+texture = ExtResource("6_u2o2s")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Background"]
+position = Vector2(1643.9999, -78)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("7_01dmm")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Background"]
+position = Vector2(2134, -75)
+scale = Vector2(2.23, 2.24)
+texture = ExtResource("8_52fi0")
+
+[node name="Solid_platforms" type="Node" parent="."]
+
+[node name="b_whiteboard_mark_cap" parent="Solid_platforms" instance=ExtResource("12_oxuyw")]
+position = Vector2(420, -51)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Solid_platforms/b_whiteboard_mark_cap"]
+libraries = {
+&"": SubResource("AnimationLibrary_7gw05")
+}
+autoplay = "move"
+
+[node name="b_whiteboard_mark_cap2" parent="Solid_platforms" instance=ExtResource("12_oxuyw")]
+position = Vector2(519, -27)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Solid_platforms/b_whiteboard_mark_cap2"]
+libraries = {
+&"": SubResource("AnimationLibrary_75ucn")
+}
+autoplay = "move"
+
+[node name="b_whiteboard_mark_cap3" parent="Solid_platforms" instance=ExtResource("12_oxuyw")]
+position = Vector2(688, -26)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Solid_platforms/b_whiteboard_mark_cap3"]
+libraries = {
+&"": SubResource("AnimationLibrary_wgyvs")
+}
+autoplay = "move"
+
+[node name="Whiteboarderaser" parent="Solid_platforms" instance=ExtResource("13_75ucn")]
+position = Vector2(618, -26)
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Solid_platforms"]
+position = Vector2(564, 30)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Solid_platforms"]
+position = Vector2(581, 30)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Solid_platforms"]
+position = Vector2(597, 30)
+texture = ExtResource("5_cq4ns")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Solid_platforms"]
+position = Vector2(614, 30)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Solid_platforms"]
+position = Vector2(630, 30)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
+position = Vector2(16, 0)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
+position = Vector2(33, 0)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
+position = Vector2(49, 0)
+texture = ExtResource("5_cq4ns")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
+position = Vector2(66, 0)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
+position = Vector2(82, 0)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41/UntitledArtwork41"]
+position = Vector2(16, 0)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41/UntitledArtwork41"]
+position = Vector2(33, 0)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41/UntitledArtwork41"]
+position = Vector2(49, 0)
+texture = ExtResource("5_cq4ns")
+
+[node name="b_whiteboard_mark_cap4" parent="Solid_platforms" instance=ExtResource("12_oxuyw")]
+position = Vector2(1130, -29)
+
+[node name="Whiteboarderaser2" parent="Solid_platforms" instance=ExtResource("13_75ucn")]
+position = Vector2(1214, -71)
+
+[node name="UntitledArtwork101" type="Sprite2D" parent="Solid_platforms"]
+position = Vector2(1315, -43.666656)
+scale = Vector2(3.5333335, 3.5333328)
+texture = ExtResource("14_cq4ns")
+
+[node name="White_table" parent="Solid_platforms" instance=ExtResource("15_oxuyw")]
+position = Vector2(1396, 33)
+
+[node name="White_table2" parent="Solid_platforms" instance=ExtResource("15_oxuyw")]
+position = Vector2(1397, -1)
+
+[node name="White_table3" parent="Solid_platforms" instance=ExtResource("15_oxuyw")]
+position = Vector2(1396, -36)
+
+[node name="White_table4" parent="Solid_platforms" instance=ExtResource("15_oxuyw")]
+position = Vector2(1463, 32)
+
+[node name="paper_trash" parent="Solid_platforms" instance=ExtResource("16_75ucn")]
+position = Vector2(1581, 34)
+scale = Vector2(0.5, 0.5)
+
+[node name="Brown_table" parent="." instance=ExtResource("14_mcstt")]
+position = Vector2(75, 19)
+
+[node name="Brown_table2" parent="." instance=ExtResource("14_mcstt")]
+position = Vector2(189, 19)
+
+[node name="Brown_table3" parent="." instance=ExtResource("14_mcstt")]
+position = Vector2(347, 19)
+
+[node name="Brown_table4" parent="." instance=ExtResource("14_mcstt")]
+position = Vector2(346, -26)
+
+[node name="Brown_table5" parent="." instance=ExtResource("14_mcstt")]
+position = Vector2(346, -72)
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="."]
+position = Vector2(256, 20)
+texture = ExtResource("15_l5lt5")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="."]
+position = Vector2(272, 20)
+texture = ExtResource("16_wgyvs")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="."]
+position = Vector2(287, 20)
+texture = ExtResource("17_1ippt")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="."]
+position = Vector2(302, 20)
+texture = ExtResource("15_l5lt5")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="."]
+position = Vector2(481, 30)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="."]
+position = Vector2(498, 30)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="."]
+position = Vector2(514, 30)
+texture = ExtResource("5_cq4ns")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="."]
+position = Vector2(531, 30)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="."]
+position = Vector2(547, 30)
+texture = ExtResource("6_7gw05")
+
+[node name="Brown_table6" parent="." instance=ExtResource("14_mcstt")]
+position = Vector2(909, 20)
+
+[node name="Brown_table7" parent="." instance=ExtResource("14_mcstt")]
+position = Vector2(1041, 19)
