@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://cf7ry0g7u5ehu"]
 
-[ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/tables/Untitled_Artwork 42.png" id="1_fw228"]
+[ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/props/Untitled_Artwork 42.png" id="1_fw228"]
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="3_kwge0"]
 [ext_resource type="Texture2D" uid="uid://cll0tg1jqq14s" path="res://assets/sprites/props/Untitled_Artwork 83.png" id="3_yemwy"]
 [ext_resource type="Texture2D" uid="uid://xk4lux8tjvj4" path="res://assets/sprites/props/Untitled_Artwork 82.png" id="4_esx1j"]
@@ -28,6 +28,33 @@ distance = -1023.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ooi0n"]
 normal = Vector2(-1, 0)
 
+[sub_resource type="Animation" id="Animation_ooi0n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-71, -3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_o3yrh"]
 resource_name = "move"
 loop_mode = 2
@@ -54,33 +81,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.5707964]
-}
-
-[sub_resource type="Animation" id="Animation_ooi0n"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-71, -3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vkx81"]
@@ -301,7 +301,7 @@ texture = ExtResource("10_u5a1m")
 
 [node name="Player" parent="." instance=ExtResource("3_kwge0")]
 z_index = 1
-position = Vector2(-155, -53)
+position = Vector2(-784, -31)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8j7h26ny4cfv"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_srwj2"]
-[ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/tables/Untitled_Artwork 42.png" id="2_cekvv"]
+[ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/props/Untitled_Artwork 42.png" id="2_cekvv"]
 [ext_resource type="Texture2D" uid="uid://dnp738n8nvmb6" path="res://assets/sprites/tables/Untitled_Artwork 44.png" id="3_nf734"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ntpgs"]

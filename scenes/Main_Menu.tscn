@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://xk4lux8tjvj4" path="res://assets/sprites/props/Untitled_Artwork 82.png" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://cs1jdg07pc8mm" path="res://assets/fonts/PixelOperator8.ttf" id="4_8ln24"]
 [ext_resource type="FontFile" uid="uid://b4ywddyju4rrv" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_rtw2f"]
-[ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://scenes/Untitled_Artwork 106.png" id="6_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://assets/sprites/tables/Untitled_Artwork 106.png" id="6_rtw2f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
 texture = ExtResource("2_ekxnf")
