@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://dueq1l4reblym"]
+[gd_scene load_steps=67 format=3 uid="uid://dueq1l4reblym"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_fy12i"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="2_8dxen"]
@@ -44,6 +44,9 @@
 [ext_resource type="Texture2D" uid="uid://3w8lfjyqg5o7" path="res://assets/sprites/pencils/Untitled_Artwork 24.png" id="41_bboc0"]
 [ext_resource type="PackedScene" uid="uid://d2nk1emswjs3u" path="res://scenes/beige_cabinet.tscn" id="42_iwj0x"]
 [ext_resource type="PackedScene" uid="uid://daygen7iscbl0" path="res://scenes/winzone.tscn" id="43_rwjik"]
+[ext_resource type="Texture2D" uid="uid://dxx1hbnh8smqa" path="res://assets/sprites/idle/Untitled_Artwork 122.png" id="45_a42wt"]
+[ext_resource type="Texture2D" uid="uid://c1gstct5rwv7m" path="res://assets/sprites/idle/Untitled_Artwork 121.png" id="46_1jsxm"]
+[ext_resource type="FontFile" uid="uid://cs1jdg07pc8mm" path="res://assets/fonts/PixelOperator8.ttf" id="47_1jsxm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0el8h"]
 distance = -43.0
@@ -90,6 +93,18 @@ size = Vector2(517.5, 24)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iw6yt"]
 size = Vector2(17, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkp7m"]
+size = Vector2(70, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bboc0"]
+size = Vector2(65, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_il3gq"]
+size = Vector2(39, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qemj7"]
+size = Vector2(19, 19)
+
 [node name="Period_1" type="Node2D"]
 
 [node name="Floor tiles" type="Node" parent="."]
@@ -106,7 +121,7 @@ texture = ExtResource("8_30wkr")
 
 [node name="Player" parent="." instance=ExtResource("1_fy12i")]
 z_index = 1
-position = Vector2(-95, -109)
+position = Vector2(-1813, -36)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -183,6 +198,22 @@ shape = SubResource("RectangleShape2D_rg1j5")
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="killzone"]
 position = Vector2(-470, 26)
 shape = SubResource("RectangleShape2D_iw6yt")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-730, -85.5)
+shape = SubResource("RectangleShape2D_dkp7m")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-914.5, -35.5)
+shape = SubResource("RectangleShape2D_bboc0")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-987.5, 5)
+shape = SubResource("RectangleShape2D_il3gq")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-794, 12)
+shape = SubResource("RectangleShape2D_qemj7")
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -903,3 +934,58 @@ position = Vector2(1543, 8.000008)
 rotation = 0.7371228
 scale = Vector2(3.4545455, 3.4545455)
 texture = ExtResource("39_1jsxm")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Decor"]
+position = Vector2(-612, -39)
+texture = ExtResource("45_a42wt")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Decor"]
+position = Vector2(-528, -126)
+texture = ExtResource("46_1jsxm")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Decor"]
+position = Vector2(554, -142)
+texture = ExtResource("46_1jsxm")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Decor"]
+position = Vector2(260, -105)
+texture = ExtResource("45_a42wt")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Node"]
+offset_left = -1965.0
+offset_top = -73.0
+offset_right = -1425.0
+offset_bottom = -50.0
+theme_override_fonts/font = ExtResource("47_1jsxm")
+text = "avoid sharp objects (pencils and scissors)"
+
+[node name="Label2" type="Label" parent="Node"]
+offset_left = -451.0
+offset_top = -36.0
+offset_right = -185.0
+offset_bottom = -13.0
+theme_override_fonts/font = ExtResource("47_1jsxm")
+text = "Don't let her get you!"
+
+[node name="Label3" type="Label" parent="Node"]
+offset_left = 776.0
+offset_top = -148.0
+offset_right = 934.0
+offset_bottom = -37.0
+theme_override_fonts/font = ExtResource("47_1jsxm")
+text = "Use 
+Markers
+and
+erasers
+as 
+platforms"
+
+[node name="Label4" type="Label" parent="Node"]
+offset_left = 1456.0
+offset_top = -66.0
+offset_right = 1686.0
+offset_bottom = -43.0
+theme_override_fonts/font = ExtResource("47_1jsxm")
+text = "Congrats! You win!"
