@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b8j7h26ny4cfv"]
+[gd_scene load_steps=38 format=3 uid="uid://b8j7h26ny4cfv"]
 
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="1_srwj2"]
 [ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/props/Untitled_Artwork 42.png" id="2_cekvv"]
@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://bgwh4s5siev15" path="res://scenes/paper_trash.tscn" id="16_75ucn"]
 [ext_resource type="Texture2D" uid="uid://cx80u5xdtunon" path="res://assets/sprites/Scissors/Untitled_Artwork 34.png" id="16_wgyvs"]
 [ext_resource type="Texture2D" uid="uid://b3b2eogg0t7mo" path="res://assets/sprites/Scissors/Untitled_Artwork 35.png" id="17_1ippt"]
+[ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://assets/sprites/tables/Untitled_Artwork 106.png" id="21_mcstt"]
+[ext_resource type="PackedScene" uid="uid://dwg4nh3gmyeqg" path="res://scenes/to_third_boss.tscn" id="22_l5lt5"]
+[ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="23_l5lt5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ntpgs"]
 distance = -49.0
@@ -32,7 +35,6 @@ size = Vector2(20, 26)
 
 [sub_resource type="Animation" id="Animation_7rmm0"]
 resource_name = "move"
-length = 0.75
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,10 +43,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.73333335),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(420, -51), Vector2(420, 49)]
+"values": [Vector2(420, -51), Vector2(420, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_cq4ns"]
@@ -144,6 +146,12 @@ _data = {
 &"move": SubResource("Animation_mcstt")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgyvs"]
+size = Vector2(52, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ippt"]
+size = Vector2(526, 24)
+
 [node name="Period_3" type="Node2D"]
 
 [node name="Standing_floor" type="StaticBody2D" parent="."]
@@ -163,22 +171,6 @@ shape = SubResource("RectangleShape2D_mcstt")
 [node name="Whiteboarderaser" parent="Standing_floor" instance=ExtResource("13_75ucn")]
 position = Vector2(2099, 45.000004)
 rotation = -1.5927784
-
-[node name="paper_trash" parent="Standing_floor" instance=ExtResource("16_75ucn")]
-position = Vector2(1673, 34)
-scale = Vector2(0.5, 0.5)
-
-[node name="paper_trash2" parent="Standing_floor" instance=ExtResource("16_75ucn")]
-position = Vector2(1767, 33)
-scale = Vector2(0.5, 0.5)
-
-[node name="paper_trash3" parent="Standing_floor" instance=ExtResource("16_75ucn")]
-position = Vector2(1875, 34)
-scale = Vector2(0.5, 0.5)
-
-[node name="paper_trash4" parent="Standing_floor" instance=ExtResource("16_75ucn")]
-position = Vector2(1984, 34)
-scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("1_srwj2")]
 z_index = 1
@@ -283,58 +275,6 @@ autoplay = "move"
 [node name="Whiteboarderaser" parent="Solid_platforms" instance=ExtResource("13_75ucn")]
 position = Vector2(618, -26)
 
-[node name="UntitledArtwork38" type="Sprite2D" parent="Solid_platforms"]
-position = Vector2(564, 30)
-texture = ExtResource("4_7rmm0")
-
-[node name="UntitledArtwork37" type="Sprite2D" parent="Solid_platforms"]
-position = Vector2(581, 30)
-texture = ExtResource("6_7gw05")
-
-[node name="UntitledArtwork39" type="Sprite2D" parent="Solid_platforms"]
-position = Vector2(597, 30)
-texture = ExtResource("5_cq4ns")
-
-[node name="UntitledArtwork40" type="Sprite2D" parent="Solid_platforms"]
-position = Vector2(614, 30)
-texture = ExtResource("4_7rmm0")
-
-[node name="UntitledArtwork41" type="Sprite2D" parent="Solid_platforms"]
-position = Vector2(630, 30)
-texture = ExtResource("6_7gw05")
-
-[node name="UntitledArtwork38" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
-position = Vector2(16, 0)
-texture = ExtResource("4_7rmm0")
-
-[node name="UntitledArtwork37" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
-position = Vector2(33, 0)
-texture = ExtResource("6_7gw05")
-
-[node name="UntitledArtwork39" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
-position = Vector2(49, 0)
-texture = ExtResource("5_cq4ns")
-
-[node name="UntitledArtwork40" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
-position = Vector2(66, 0)
-texture = ExtResource("4_7rmm0")
-
-[node name="UntitledArtwork41" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41"]
-position = Vector2(82, 0)
-texture = ExtResource("6_7gw05")
-
-[node name="UntitledArtwork38" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41/UntitledArtwork41"]
-position = Vector2(16, 0)
-texture = ExtResource("4_7rmm0")
-
-[node name="UntitledArtwork37" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41/UntitledArtwork41"]
-position = Vector2(33, 0)
-texture = ExtResource("6_7gw05")
-
-[node name="UntitledArtwork39" type="Sprite2D" parent="Solid_platforms/UntitledArtwork41/UntitledArtwork41"]
-position = Vector2(49, 0)
-texture = ExtResource("5_cq4ns")
-
 [node name="b_whiteboard_mark_cap4" parent="Solid_platforms" instance=ExtResource("12_oxuyw")]
 position = Vector2(1130, -29)
 
@@ -358,63 +298,151 @@ position = Vector2(1396, -36)
 [node name="White_table4" parent="Solid_platforms" instance=ExtResource("15_oxuyw")]
 position = Vector2(1463, 32)
 
-[node name="paper_trash" parent="Solid_platforms" instance=ExtResource("16_75ucn")]
-position = Vector2(1581, 34)
-scale = Vector2(0.5, 0.5)
-
-[node name="Brown_table" parent="." instance=ExtResource("14_mcstt")]
+[node name="Brown_table" parent="Solid_platforms" instance=ExtResource("14_mcstt")]
 position = Vector2(75, 19)
 
-[node name="Brown_table2" parent="." instance=ExtResource("14_mcstt")]
+[node name="Brown_table2" parent="Solid_platforms" instance=ExtResource("14_mcstt")]
 position = Vector2(189, 19)
 
-[node name="Brown_table3" parent="." instance=ExtResource("14_mcstt")]
+[node name="Brown_table3" parent="Solid_platforms" instance=ExtResource("14_mcstt")]
 position = Vector2(347, 19)
 
-[node name="Brown_table4" parent="." instance=ExtResource("14_mcstt")]
+[node name="Brown_table4" parent="Solid_platforms" instance=ExtResource("14_mcstt")]
 position = Vector2(346, -26)
 
-[node name="Brown_table5" parent="." instance=ExtResource("14_mcstt")]
+[node name="Brown_table5" parent="Solid_platforms" instance=ExtResource("14_mcstt")]
 position = Vector2(346, -72)
 
-[node name="UntitledArtwork33" type="Sprite2D" parent="."]
+[node name="Brown_table6" parent="Solid_platforms" instance=ExtResource("14_mcstt")]
+position = Vector2(909, 20)
+
+[node name="Brown_table7" parent="Solid_platforms" instance=ExtResource("14_mcstt")]
+position = Vector2(1041, 19)
+
+[node name="Hurt" type="Node" parent="."]
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Hurt"]
 position = Vector2(256, 20)
 texture = ExtResource("15_l5lt5")
 
-[node name="UntitledArtwork34" type="Sprite2D" parent="."]
+[node name="UntitledArtwork34" type="Sprite2D" parent="Hurt"]
 position = Vector2(272, 20)
 texture = ExtResource("16_wgyvs")
 
-[node name="UntitledArtwork35" type="Sprite2D" parent="."]
+[node name="UntitledArtwork35" type="Sprite2D" parent="Hurt"]
 position = Vector2(287, 20)
 texture = ExtResource("17_1ippt")
 
-[node name="UntitledArtwork36" type="Sprite2D" parent="."]
+[node name="UntitledArtwork36" type="Sprite2D" parent="Hurt"]
 position = Vector2(302, 20)
 texture = ExtResource("15_l5lt5")
 
-[node name="UntitledArtwork38" type="Sprite2D" parent="."]
+[node name="UntitledArtwork38" type="Sprite2D" parent="Hurt"]
 position = Vector2(481, 30)
 texture = ExtResource("4_7rmm0")
 
-[node name="UntitledArtwork37" type="Sprite2D" parent="."]
+[node name="UntitledArtwork37" type="Sprite2D" parent="Hurt"]
 position = Vector2(498, 30)
 texture = ExtResource("6_7gw05")
 
-[node name="UntitledArtwork39" type="Sprite2D" parent="."]
+[node name="UntitledArtwork39" type="Sprite2D" parent="Hurt"]
 position = Vector2(514, 30)
 texture = ExtResource("5_cq4ns")
 
-[node name="UntitledArtwork40" type="Sprite2D" parent="."]
+[node name="UntitledArtwork40" type="Sprite2D" parent="Hurt"]
 position = Vector2(531, 30)
 texture = ExtResource("4_7rmm0")
 
-[node name="UntitledArtwork41" type="Sprite2D" parent="."]
+[node name="UntitledArtwork41" type="Sprite2D" parent="Hurt"]
 position = Vector2(547, 30)
 texture = ExtResource("6_7gw05")
 
-[node name="Brown_table6" parent="." instance=ExtResource("14_mcstt")]
-position = Vector2(909, 20)
+[node name="paper_trash" parent="Hurt" instance=ExtResource("16_75ucn")]
+position = Vector2(1673, 34)
+scale = Vector2(0.5, 0.5)
 
-[node name="Brown_table7" parent="." instance=ExtResource("14_mcstt")]
-position = Vector2(1041, 19)
+[node name="paper_trash2" parent="Hurt" instance=ExtResource("16_75ucn")]
+position = Vector2(1767, 33)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash3" parent="Hurt" instance=ExtResource("16_75ucn")]
+position = Vector2(1875, 34)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash4" parent="Hurt" instance=ExtResource("16_75ucn")]
+position = Vector2(1984, 34)
+scale = Vector2(0.5, 0.5)
+
+[node name="paper_trash5" parent="Hurt" instance=ExtResource("16_75ucn")]
+position = Vector2(1581, 34)
+scale = Vector2(0.5, 0.5)
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Hurt"]
+position = Vector2(564, 30)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork43" type="Sprite2D" parent="Hurt"]
+position = Vector2(581, 30)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="Hurt"]
+position = Vector2(597, 30)
+texture = ExtResource("5_cq4ns")
+
+[node name="UntitledArtwork45" type="Sprite2D" parent="Hurt"]
+position = Vector2(614, 30)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork46" type="Sprite2D" parent="Hurt"]
+position = Vector2(630, 30)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Hurt/UntitledArtwork46"]
+position = Vector2(16, 0)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Hurt/UntitledArtwork46"]
+position = Vector2(33, 0)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Hurt/UntitledArtwork46"]
+position = Vector2(49, 0)
+texture = ExtResource("5_cq4ns")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Hurt/UntitledArtwork46"]
+position = Vector2(66, 0)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Hurt/UntitledArtwork46"]
+position = Vector2(82, 0)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Hurt/UntitledArtwork46/UntitledArtwork41"]
+position = Vector2(16, 0)
+texture = ExtResource("4_7rmm0")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Hurt/UntitledArtwork46/UntitledArtwork41"]
+position = Vector2(33, 0)
+texture = ExtResource("6_7gw05")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Hurt/UntitledArtwork46/UntitledArtwork41"]
+position = Vector2(49, 0)
+texture = ExtResource("5_cq4ns")
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="."]
+position = Vector2(2551, 12.000122)
+rotation = 0.72175366
+scale = Vector2(3.3636363, 3.3636363)
+texture = ExtResource("21_mcstt")
+
+[node name="to_third_boss" parent="." instance=ExtResource("22_l5lt5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="to_third_boss"]
+position = Vector2(2551, 9)
+shape = SubResource("RectangleShape2D_wgyvs")
+
+[node name="killzone" parent="." instance=ExtResource("23_l5lt5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(503, 32)
+shape = SubResource("RectangleShape2D_1ippt")

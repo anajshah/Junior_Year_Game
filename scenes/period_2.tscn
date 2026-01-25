@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cf7ry0g7u5ehu"]
+[gd_scene load_steps=46 format=3 uid="uid://cf7ry0g7u5ehu"]
 
 [ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/props/Untitled_Artwork 42.png" id="1_fw228"]
 [ext_resource type="Texture2D" uid="uid://bdydiy0v66s5p" path="res://assets/sprites/math/Untitled_Artwork 132.png" id="1_lnwih"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://blxanwvlsa5wo" path="res://assets/sprites/props/Untitled_Artwork 101.png" id="32_ctqrp"]
 [ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://assets/sprites/tables/Untitled_Artwork 106.png" id="33_ml3cu"]
 [ext_resource type="PackedScene" uid="uid://bipgsl06baioc" path="res://scenes/to_second_boss.tscn" id="34_ml3cu"]
+[ext_resource type="FontFile" uid="uid://cs1jdg07pc8mm" path="res://assets/fonts/PixelOperator8.ttf" id="35_3uh1v"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1ma0l"]
 distance = -43.0
@@ -372,7 +373,7 @@ texture = ExtResource("20_ctqrp")
 
 [node name="Player" parent="." instance=ExtResource("3_kwge0")]
 z_index = 1
-position = Vector2(1718, 13)
+position = Vector2(-759, -12)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -936,3 +937,11 @@ texture = ExtResource("33_ml3cu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_second_boss"]
 position = Vector2(1800, 8)
 shape = SubResource("RectangleShape2D_oeohj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -84.0
+offset_top = -73.0
+offset_right = 202.0
+offset_bottom = -50.0
+theme_override_fonts/font = ExtResource("35_3uh1v")
+text = "Don't step in the water"

@@ -989,3 +989,9 @@ offset_right = 1686.0
 offset_bottom = -43.0
 theme_override_fonts/font = ExtResource("47_1jsxm")
 text = "Congrats! You win!"
+
+[node name="Whiteboarderaser" parent="Node" instance=ExtResource("30_iwj0x")]
+position = Vector2(833, -114)
+
+[node name="Whiteboarderaser2" parent="Node" instance=ExtResource("30_iwj0x")]
+position = Vector2(890, -66)
