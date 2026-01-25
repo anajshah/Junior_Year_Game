@@ -1,7 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://cf7ry0g7u5ehu"]
+[gd_scene load_steps=45 format=3 uid="uid://cf7ry0g7u5ehu"]
 
 [ext_resource type="Texture2D" uid="uid://c2we2ccdw6ae7" path="res://assets/sprites/props/Untitled_Artwork 42.png" id="1_fw228"]
+[ext_resource type="Texture2D" uid="uid://bdydiy0v66s5p" path="res://assets/sprites/math/Untitled_Artwork 132.png" id="1_lnwih"]
+[ext_resource type="Texture2D" uid="uid://d2e5p0gqmrp83" path="res://assets/sprites/math/Untitled_Artwork 123.png" id="2_x4uad"]
 [ext_resource type="PackedScene" uid="uid://bfkdy3pkror0k" path="res://scenes/player.tscn" id="3_kwge0"]
+[ext_resource type="Texture2D" uid="uid://tv8hbywpj7ry" path="res://assets/sprites/math/Untitled_Artwork 128.png" id="3_y5ske"]
 [ext_resource type="Texture2D" uid="uid://cll0tg1jqq14s" path="res://assets/sprites/props/Untitled_Artwork 83.png" id="3_yemwy"]
 [ext_resource type="Texture2D" uid="uid://xk4lux8tjvj4" path="res://assets/sprites/props/Untitled_Artwork 82.png" id="4_esx1j"]
 [ext_resource type="Texture2D" uid="uid://drujhrambge15" path="res://assets/sprites/props/Untitled_Artwork 84.png" id="4_xmqja"]
@@ -16,7 +19,21 @@
 [ext_resource type="PackedScene" uid="uid://dx135p0pq8kbo" path="res://scenes/b_whiteboard_mark_cap.tscn" id="10_5d8t7"]
 [ext_resource type="Texture2D" uid="uid://coppoulerng21" path="res://assets/sprites/props/Untitled_Artwork 88.png" id="10_u5a1m"]
 [ext_resource type="Texture2D" uid="uid://c4x8niq6b65ki" path="res://assets/sprites/props/Untitled_Artwork 102.png" id="15_nn36p"]
+[ext_resource type="Texture2D" uid="uid://cyno74iqs3c12" path="res://assets/sprites/math/Untitled_Artwork 126.png" id="17_acpt6"]
 [ext_resource type="PackedScene" uid="uid://ddkwdpd844yvk" path="res://scenes/killzone.tscn" id="17_qdcpb"]
+[ext_resource type="Texture2D" uid="uid://duao1xvxrq7ue" path="res://assets/sprites/math/Untitled_Artwork 125.png" id="18_l4txi"]
+[ext_resource type="Texture2D" uid="uid://bpm7t5uuryk6b" path="res://assets/sprites/math/Untitled_Artwork 129.png" id="19_a5y6g"]
+[ext_resource type="Texture2D" uid="uid://clk50eya4i6wa" path="res://assets/sprites/math/Untitled_Artwork 130.png" id="20_ctqrp"]
+[ext_resource type="Texture2D" uid="uid://riyk8wbjpwgp" path="res://assets/sprites/math/Untitled_Artwork 131.png" id="25_ml3cu"]
+[ext_resource type="Texture2D" uid="uid://drhsglpp118ts" path="res://assets/sprites/math/Untitled_Artwork 124.png" id="26_3uh1v"]
+[ext_resource type="Texture2D" uid="uid://bwsc2p5gty0xo" path="res://assets/sprites/math/Untitled_Artwork 127.png" id="27_oeohj"]
+[ext_resource type="PackedScene" uid="uid://ce1ns4q1l24jq" path="res://scenes/brown_table.tscn" id="28_x4uad"]
+[ext_resource type="Texture2D" uid="uid://5epskqlxevet" path="res://assets/sprites/Scissors/Untitled_Artwork 37.png" id="29_l4txi"]
+[ext_resource type="Texture2D" uid="uid://q5883nqh0orx" path="res://assets/sprites/Scissors/Untitled_Artwork 38.png" id="30_a5y6g"]
+[ext_resource type="Texture2D" uid="uid://bbtb76lk3oudr" path="res://assets/sprites/Scissors/Untitled_Artwork 36.png" id="31_ctqrp"]
+[ext_resource type="Texture2D" uid="uid://blxanwvlsa5wo" path="res://assets/sprites/props/Untitled_Artwork 101.png" id="32_ctqrp"]
+[ext_resource type="Texture2D" uid="uid://cp3kqn07w60bp" path="res://assets/sprites/tables/Untitled_Artwork 106.png" id="33_ml3cu"]
+[ext_resource type="PackedScene" uid="uid://bipgsl06baioc" path="res://scenes/to_second_boss.tscn" id="34_ml3cu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1ma0l"]
 distance = -43.0
@@ -27,6 +44,9 @@ distance = -1023.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ooi0n"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctqrp"]
+size = Vector2(75, 123)
 
 [sub_resource type="Animation" id="Animation_ooi0n"]
 length = 0.001
@@ -92,7 +112,30 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6fg6"]
 size = Vector2(598, 5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uh1v"]
+size = Vector2(202, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeohj"]
+size = Vector2(32, 50)
+
 [node name="Period_2" type="Node2D"]
+
+[node name="Node3" type="Node" parent="."]
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Node3"]
+position = Vector2(-427, -33)
+scale = Vector2(4.9333324, 4.9333324)
+texture = ExtResource("1_lnwih")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Node3"]
+position = Vector2(-223.15907, -34.25)
+scale = Vector2(2.7954543, 2.7954543)
+texture = ExtResource("2_x4uad")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Node3"]
+position = Vector2(51.5, -27.5)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("3_y5ske")
 
 [node name="Floor tiles" type="Node" parent="."]
 
@@ -104,7 +147,8 @@ scale = Vector2(1037.9999, 118.3)
 texture = ExtResource("1_fw228")
 
 [node name="UntitledArtwork82" type="Sprite2D" parent="Floor tiles"]
-position = Vector2(513, -87)
+z_index = -1
+position = Vector2(507, -87)
 scale = Vector2(4822.9995, 217.75)
 texture = ExtResource("4_esx1j")
 
@@ -299,9 +343,36 @@ position = Vector2(607, -71)
 scale = Vector2(2, 2)
 texture = ExtResource("10_u5a1m")
 
+[node name="UntitledArtwork126" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(234.00002, -46.000004)
+scale = Vector2(2.357954, 2.3579545)
+texture = ExtResource("17_acpt6")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(495, -32)
+texture = ExtResource("3_y5ske")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(404, -81)
+scale = Vector2(3.2333333, 3.2333333)
+texture = ExtResource("18_l4txi")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Floor tiles"]
+position = Vector2(-890, -102)
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("19_a5y6g")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Floor tiles/UntitledArtwork129"]
+position = Vector2(-2.1875, 14.999998)
+texture = ExtResource("19_a5y6g")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Floor tiles/UntitledArtwork129"]
+position = Vector2(-2.1875, 14.999998)
+texture = ExtResource("20_ctqrp")
+
 [node name="Player" parent="." instance=ExtResource("3_kwge0")]
 z_index = 1
-position = Vector2(-784, -31)
+position = Vector2(1718, 13)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -324,6 +395,10 @@ shape = SubResource("WorldBoundaryShape2D_o3yrh")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Standing_floor"]
 position = Vector2(2728, -18)
 shape = SubResource("WorldBoundaryShape2D_ooi0n")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Standing_floor"]
+position = Vector2(1389, -21)
+shape = SubResource("RectangleShape2D_ctqrp")
 
 [node name="Node" type="Node" parent="."]
 
@@ -740,3 +815,124 @@ scale = Vector2(0.5, 0.5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 position = Vector2(199, 36.5)
 shape = SubResource("RectangleShape2D_j6fg6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
+position = Vector2(952, 26.5)
+shape = SubResource("RectangleShape2D_3uh1v")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="."]
+position = Vector2(1290, -24.000004)
+scale = Vector2(2.8409092, 2.8409092)
+texture = ExtResource("2_x4uad")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="."]
+position = Vector2(-77, -124.99999)
+scale = Vector2(2.3372724, 2.3372724)
+texture = ExtResource("26_3uh1v")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="."]
+position = Vector2(805, -33.000008)
+scale = Vector2(4.8666677, 4.8666677)
+texture = ExtResource("25_ml3cu")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="."]
+position = Vector2(951.99994, -79.999985)
+scale = Vector2(2.46, 2.46)
+texture = ExtResource("26_3uh1v")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="."]
+position = Vector2(1112.841, -24.749996)
+scale = Vector2(3.4772725, 3.4772727)
+texture = ExtResource("27_oeohj")
+
+[node name="Brown_table" parent="." instance=ExtResource("28_x4uad")]
+position = Vector2(792, 16)
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="."]
+position = Vector2(863, 26)
+texture = ExtResource("29_l4txi")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="."]
+position = Vector2(880, 26)
+texture = ExtResource("30_a5y6g")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="."]
+position = Vector2(897, 25)
+texture = ExtResource("31_ctqrp")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="."]
+position = Vector2(914, 25)
+texture = ExtResource("29_l4txi")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="."]
+position = Vector2(931, 25)
+texture = ExtResource("30_a5y6g")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="."]
+position = Vector2(948, 25)
+texture = ExtResource("31_ctqrp")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="."]
+position = Vector2(964, 25)
+texture = ExtResource("29_l4txi")
+
+[node name="UntitledArtwork43" type="Sprite2D" parent="."]
+position = Vector2(981, 25)
+texture = ExtResource("30_a5y6g")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="."]
+position = Vector2(997, 25)
+texture = ExtResource("31_ctqrp")
+
+[node name="UntitledArtwork45" type="Sprite2D" parent="."]
+position = Vector2(1013, 25)
+texture = ExtResource("29_l4txi")
+
+[node name="UntitledArtwork46" type="Sprite2D" parent="."]
+position = Vector2(1030, 24)
+texture = ExtResource("30_a5y6g")
+
+[node name="UntitledArtwork47" type="Sprite2D" parent="."]
+position = Vector2(1047, 24)
+texture = ExtResource("31_ctqrp")
+
+[node name="b_whiteboard_mark_cap" parent="." instance=ExtResource("10_5d8t7")]
+position = Vector2(1102, 12)
+
+[node name="Whiteboarderaser" parent="." instance=ExtResource("9_o3yrh")]
+position = Vector2(856, -28)
+
+[node name="Whiteboarderaser2" parent="." instance=ExtResource("9_o3yrh")]
+position = Vector2(858, -75)
+
+[node name="Whiteboarderaser3" parent="." instance=ExtResource("9_o3yrh")]
+position = Vector2(1243, -58)
+
+[node name="Whiteboarderaser4" parent="." instance=ExtResource("9_o3yrh")]
+position = Vector2(912, -123)
+
+[node name="Whiteboarderaser5" parent="." instance=ExtResource("9_o3yrh")]
+position = Vector2(994, -123)
+
+[node name="Whiteboarderaser6" parent="." instance=ExtResource("9_o3yrh")]
+position = Vector2(1181, -21)
+
+[node name="UntitledArtwork101" type="Sprite2D" parent="."]
+position = Vector2(1388.0001, -24.000004)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("32_ctqrp")
+
+[node name="b_whiteboard_mark_cap2" parent="." instance=ExtResource("10_5d8t7")]
+position = Vector2(1276, -51)
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="."]
+position = Vector2(1798, 22)
+rotation = 0.7979753
+scale = Vector2(2, 2)
+texture = ExtResource("33_ml3cu")
+
+[node name="to_second_boss" parent="." instance=ExtResource("34_ml3cu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="to_second_boss"]
+position = Vector2(1800, 8)
+shape = SubResource("RectangleShape2D_oeohj")
