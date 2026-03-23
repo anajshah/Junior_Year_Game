@@ -7,10 +7,8 @@
 This is a platformer game I made using godot that is based on my school classes. Art and code is all done by me. No AI used!
 <br />
 Here's the itch link:
-* [It differentiates between switching a scene and script](https://anajshah.itch.io/junior-year-game)
+* [Junior Year Game](https://anajshah.itch.io/junior-year-game)
 <br />
-You can also see your time spent in the editor itself:
-[![Time in editor][time-screenshot]]
 
 <p align="right">(<a href="#readme-top">top</a>)</p>
 
